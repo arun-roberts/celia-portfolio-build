@@ -1,0 +1,180 @@
+.home {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
+
+.home-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    z-index: 2;
+    font-family: 'Futura', sans-serif;
+}
+
+.home-container__content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#home-header {
+  display: inline-block;
+  position: relative;
+  font-size: 4.3rem;
+  font-weight: 100;
+  margin-bottom: 0.2rem;
+  color: black;
+  text-decoration: none;
+  transition: color 0.7s ease-out;
+}
+
+#home-header::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  height: 0.5rem;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+#home-header:hover {
+  color: rgb(116, 116, 116);
+}
+
+#home-header:hover::after {
+  transform: scaleX(1);
+}
+
+.home-button {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.2rem;
+    color: black;
+    border: 0.1rem solid black;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+    /* background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); */
+
+}
+
+.slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 40s linear infinite; 
+    margin: 0;
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://www.dropbox.com/s/ljppl5jy0vlg4rm/BlenderPancakes_800.jpg?raw=1) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://www.dropbox.com/s/z8d8d0oddyjyysj/Mussels800.jpg?raw=1);
+  animation-delay: 8s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://www.dropbox.com/s/3uqugzgx6h6e4wf/Octopus800.jpg?raw=1);
+  animation-delay: 16s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://www.dropbox.com/s/sscymlzft7k521r/Pavalova800.jpg?raw=1);
+  animation-delay: 24s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://www.dropbox.com/s/24saqasdh7hkfzt/Pizzas800.jpg?raw=1);
+  animation-delay: 32s; 
+}
+
+@media screen and (min-width: 800px) {
+
+  .slideshow li:nth-child(1) { 
+    background-image: url(https://www.dropbox.com/s/jn94q1cpnj4v2ci/BlenderPancakes_AW18_Recipee_COMP.jpg?raw=1) 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://www.dropbox.com/s/d9k8wc6fm2buzln/rose-syrup-pistachio-close-up%2520copy.jpg?raw=1);
+    animation-delay: 8s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(https://www.dropbox.com/s/t1u0z5fohy7uuiz/Octopus-1%20copy.jpg?raw=1);
+    animation-delay: 16s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(https://www.dropbox.com/s/arg5zd967p7f6y8/OB-finest-platter%20%281%29.jpg?raw=1);
+    animation-delay: 24s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://www.dropbox.com/s/jux6yun0as2vbub/Smoked-Trout-slices-open-sandwich-1%20copy%202.jpg?raw=1);
+    animation-delay: 32s; 
+  }
+
+}
+
+@keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }
+
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
