@@ -1,14 +1,8 @@
-import React, { useContext, useEffect, useState, useLayoutEffect } from 'react'
+import React, { useContext } from 'react'
 import BlogContext from '../../../context/BlogContext'
 
 const About = () => {
     const { blogPosts } = useContext(BlogContext)
-    const [ ghostKitchen, clearGhostKitchen ] = useState(true)
-    useLayoutEffect(() => clearGhostKitchen(true), [ghostKitchen])
-    useEffect(() => {
-        clearGhostKitchen(false);
-        return () => clearGhostKitchen(true);
-    }, [ghostKitchen]);
 
     return (
         <>
@@ -79,11 +73,8 @@ const About = () => {
                     </div>
                 ))}
             </div>
-            <div className="ghost-div ghost-div--kitchen" style={{ background: `${ ghostKitchen === true ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0)'}` }}></div>
         </>
     )
 }
 
 export default About
-
-// { ghostKitchen, clearKitchen }

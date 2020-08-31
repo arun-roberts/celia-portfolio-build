@@ -18,7 +18,7 @@ body
 
 .site
     min-height: 100vh
-    padding: 4.7rem 4.7rem
+    padding: 2rem 2rem
 
     &-container
         position: relative
@@ -33,14 +33,21 @@ li, .social-links__item
     list-style-type: none
     margin: 0 0.8rem
 
+@media screen and (min-width: 900px)
+    .site
+        padding: 4.7rem 4.7rem
+
+
+    li, .social-links__item 
+        display: inline-block
+        list-style-type: none
+        margin: 0 0.8rem
+
 
 
 // ========================================================
 //                         HEADER
 // ======================================================== 
-
-
-
 
 .line 
     height: 0.3rem
@@ -48,12 +55,13 @@ li, .social-links__item
     background-color: black
     outline: none
     border: none
-    margin-bottom: 2rem
+    margin-bottom: 1.2rem
 
 
 .main-header 
-    font-size: 3.5rem
-    letter-spacing: 0.7rem
+    font-size: 4.5rem
+    letter-spacing: 0.5rem
+    line-height: 1.15
     display: inline-block
     margin: 0 auto
     margin-bottom: 0.5rem
@@ -64,20 +72,31 @@ li, .social-links__item
     display: flex
     width: 100%
 
+@media screen and (min-width: 900px)
+    .line 
+        height: 0.3rem
+        margin-bottom: 2rem
+
+    .main-header 
+        font-size: 3.5rem
+        line-height: normal
+        letter-spacing: 0.7rem
+        margin-bottom: 0.5rem
+
 // ========================================================
 //                          NAV
 // ======================================================== 
 
 .main-nav 
-    margin-bottom: 3rem
+    margin-bottom: 1.8rem
 
     &__list 
-        margin: 1.5rem 0 2.2rem
+        margin: 1.2rem 0 1.4rem
 
 
     &__link 
         color: black
-        font-size: 0.95rem
+        font-size: 1.3rem
         font-weight: 600
         letter-spacing: 0.1rem
         position: relative
@@ -107,6 +126,20 @@ li, .social-links__item
 .main-nav__link:hover, .main-header:hover 
     color: grey
 
+@media screen and (min-width: 900px)
+    .main-nav 
+    margin-bottom: 3rem
+
+    &__list 
+        margin: 1.5rem 0 2.2rem
+
+
+    &__link 
+        font-size: 0.95rem
+        font-weight: 600
+        letter-spacing: 0.1rem
+        position: relative
+
 
 // ========================================================
 //                         GALLERY
@@ -124,45 +157,50 @@ li, .social-links__item
         margin: 0 auto
 
 
-img 
+.image 
     width: 100%
     height: auto
-    margin-bottom: 0.6rem
+    margin-bottom: 0.2rem
     z-index: 1
 
 
-.fadeAway 
-    position: absolute
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    z-index: 2
-    transition: background 1s ease-in
+    &-fadeaway 
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 2
+        transition: background 1s ease-in
+
+@media screen and (min-width: 900px)        
+    .grid 
+        position: relative
+        margin: 0 auto
 
 
-.ghost-div
-    position: absolute
-    // width: 100%
-    // height: 100%
-    top: 0
-    bottom: 0
-    right: 0
-    left: 0
-    z-index: 2
-    transition: background 1s ease-in
+        &-item 
+            position: relative
+            width: 97%
+            height: 97%
+            margin: 0 auto
 
-    // &--kitchen
-    //     background: rgba(255, 255, 255, 1)
-    
-    // &--motion
-    //     background: rgba(255, 255, 255, 1)
 
-    // &--about
-    //     background: rgba(255, 255, 255, 1)
+    .image 
+        width: 100%
+        height: auto
+        margin-bottom: 0.6rem
+        z-index: 1
 
-    // &--contact
-    //     background: rgba(255, 255, 255, 1)
+
+        &-fadeaway 
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            z-index: 2
+            transition: background 1s ease-in
 
 
 // ========================================================
@@ -170,31 +208,66 @@ img
 // ======================================================== 
 
 .about 
-    width: 65%
+    width: 97%
     display: flex
-    flex-direction: row
+    flex-direction: column
     justify-content: space-between
     margin: 0 auto 4rem
+    color: black
 
 
     &__content 
-        flex: 0 1 auto
-        display: inline-block
-        color: grey
+        text-align: center
+        flex: 1 1 auto
+        display: block
+        color: black
         padding: 0
-        width: 47%
+        width: 100%
 
+    &__heading
+        font-size: 1.3rem
+
+    &__sub-heading
+        font-size: 1.1rem
+        margin-bottom: 1rem
 
     &__text 
         width: 100%
         font-size: 1rem
         font-weight: 300
         text-transform: none
-        text-align: left
-
-
+        margin-bottom: 1rem
+    
         &--black 
             color: black
+
+@media screen and (min-width: 900px)
+    .about 
+        width: 65%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin: 0 auto 4rem
+
+
+        &__content 
+            flex: 0 1 auto
+            display: inline-block
+            color: grey
+            padding: 0
+            width: 47%
+
+
+        &__text 
+            width: 100%
+            font-size: 1rem
+            font-weight: 300
+            text-transform: none
+            text-align: left
+
+
+            &--black 
+                color: black
 
 // ========================================================
 //                         MOTION
@@ -202,13 +275,21 @@ img
 
 
 .motion 
-    width: 80%
+    width: 97%
     margin: 0 auto
     
 
     &-video 
         width: 100%
-        z-index: 2
+
+@media screen and (min-width: 900px)
+    .motion 
+        width: 80%
+        margin: 0 auto
+        
+
+        &-video 
+            width: 100%
 
 
 // ========================================================
@@ -217,7 +298,7 @@ img
 
 
 .recipe 
-    width: 55%
+    width: 97%
     margin: 0 auto
 
 
@@ -247,8 +328,8 @@ img
 
 
         &__image
-            width: 60%
-            height: 60%
+            width: 100%
+            height: 100%
             margin: 0 auto
 
 
@@ -320,25 +401,176 @@ img
 
             &-instruction
 
+@media screen and (min-width: 900px)
+    .recipe 
+        width: 55%
+        margin: 0 auto
+
+
+        &-body
+            display: flex
+
+        
+        &-headings 
+            text-align: center
+            margin-bottom: 1rem
+
+
+        &-time 
+            margin-bottom: 1rem
+
+
+        &-item__ingredient 
+            display: block
+            padding: 0
+            margin: 0
+
+
+        &-figure
+            display: flex
+            justify-content: center
+            margin: 0 auto 2rem
+
+
+            &__image
+                width: 100%
+                height: 100%
+                margin: 0 auto
+
+
+        &-serves 
+            margin: 1rem 0 2rem
+
+
+        &-ingredients
+            margin: 2rem 0 1rem
+
+
+            &__main
+                margin-bottom: 1rem
+
+
+            &__list
+                margin-bottom: 1rem
+
+
+            &__ingredient
+                display: block
+                margin: 0
+
+
+            &__side
+                margin-bottom: 1rem
+
+
+        &-extras__title
+            margin-bottom: 1rem
+
+
+        &-extras__item
+            margin-bottom: 1rem
+
+
+        &-method
+            margin-bottom: 3rem
+
+
+            &__heading
+
+
+            &__list
+                margin-bottom: 1rem
+                counter-reset: method-counter
+
+
+                &-item
+                    margin: 1rem 0 0 3rem
+                    position: relative
+                    display: block
+
+
+                    &::before 
+                        display: flex
+                        justify-content: flex-end
+                        align-items: flex-end
+                        counter-increment: method-counter
+                        content: counter(method-counter) '.'
+                        width: 1rem
+                        height: auto
+                        position: absolute
+                        left: -2rem
+
+
+            &__serve
+
+
+                &-instruction
+
+
 // ========================================================
 //                         CONTACT
 // ========================================================
 
 .contact 
-    width: 45%;
-    margin: 0 auto 5rem;
+    width: 97%
+    margin: 0 auto 5rem
 
 
     &-header 
-        font-size: 1.65rem;
-        margin-bottom: 1.8rem;
+        font-size: 1.65rem
+        margin-bottom: 1.8rem
 
 
     &-text 
-        width: 96%;
-        font-size: 0.9rem;
-        line-height: 1.6rem;
-        margin-bottom: 1.5rem;
+        width: 96%
+        font-size: 0.9rem
+        line-height: 1.6rem
+        margin-bottom: 1.5rem
+
+.form
+    width: 100%
+
+    &-item
+
+        &__name, &__email, &__subject, &__message
+            display: block
+            width: 100%
+            margin-bottom: 1rem
+            height: 2rem
+            background-color: rgb(245, 245, 245)
+            border: none
+            box-shadow: 0 0 0 0.01rem  rgb(116, 116, 116)
+            padding-left: 0.5rem
+
+        &__message
+            height: 5rem
+            border-radius: none
+            padding: 0.3rem 0.5rem
+
+        &__submit
+            padding: 0.2rem 0.5rem
+
+    
+            
+        
+
+@media screen and (min-width: 900px)
+    .contact 
+        width: 45%
+        margin: 0 auto 5rem
+
+
+        &-header 
+            font-size: 1.65rem
+            margin-bottom: 1.8rem
+
+
+        &-text 
+            width: 96%
+            font-size: 0.9rem
+            line-height: 1.6rem
+            margin-bottom: 1.5rem
+
 
 // ========================================================
 //                         FOOTER
@@ -404,7 +636,16 @@ img
 
 .acknowledgement 
     text-align: center
-    width: 45%
+    width: 90%
     margin: 0 auto
     font-size: 0.8rem
-    margin-top: 2rem 
+    margin-top: 1.2rem 
+
+@media screen and (min-width: 900px)
+
+    .acknowledgement 
+        text-align: center
+        width: 45%
+        margin: 0 auto
+        font-size: 0.8rem
+        margin-top: 2rem 

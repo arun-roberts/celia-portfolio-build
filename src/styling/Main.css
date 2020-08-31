@@ -15,7 +15,7 @@ body {
 
 .site {
   min-height: 100vh;
-  padding: 4.7rem 4.7rem;
+  padding: 2rem 2rem;
 }
 
 .site-container {
@@ -33,18 +33,30 @@ li, .social-links__item {
   margin: 0 0.8rem;
 }
 
+@media screen and (min-width: 900px) {
+  .site {
+    padding: 4.7rem 4.7rem;
+  }
+  li, .social-links__item {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 0.8rem;
+  }
+}
+
 .line {
   height: 0.3rem;
   color: black;
   background-color: black;
   outline: none;
   border: none;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
 }
 
 .main-header {
-  font-size: 3.5rem;
-  letter-spacing: 0.7rem;
+  font-size: 4.5rem;
+  letter-spacing: 0.5rem;
+  line-height: 1.15;
   display: inline-block;
   margin: 0 auto;
   margin-bottom: 0.5rem;
@@ -58,17 +70,30 @@ li, .social-links__item {
   width: 100%;
 }
 
+@media screen and (min-width: 900px) {
+  .line {
+    height: 0.3rem;
+    margin-bottom: 2rem;
+  }
+  .main-header {
+    font-size: 3.5rem;
+    line-height: normal;
+    letter-spacing: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
 .main-nav {
-  margin-bottom: 3rem;
+  margin-bottom: 1.8rem;
 }
 
 .main-nav__list {
-  margin: 1.5rem 0 2.2rem;
+  margin: 1.2rem 0 1.4rem;
 }
 
 .main-nav__link {
   color: black;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
   position: relative;
@@ -106,6 +131,19 @@ li, .social-links__item {
   color: grey;
 }
 
+@media screen and (min-width: 900px) {
+  margin-bottom: 3rem;
+  __list {
+    margin: 1.5rem 0 2.2rem;
+  }
+  __link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    position: relative;
+  }
+}
+
 .grid {
   position: relative;
   margin: 0 auto;
@@ -118,14 +156,14 @@ li, .social-links__item {
   margin: 0 auto;
 }
 
-img {
+.image {
   width: 100%;
   height: auto;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.2rem;
   z-index: 1;
 }
 
-.fadeAway {
+.image-fadeaway {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -136,40 +174,69 @@ img {
   transition: background 1s ease-in;
 }
 
-.ghost-div {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 2;
-  -webkit-transition: background 1s ease-in;
-  transition: background 1s ease-in;
+@media screen and (min-width: 900px) {
+  .grid {
+    position: relative;
+    margin: 0 auto;
+  }
+  .grid-item {
+    position: relative;
+    width: 97%;
+    height: 97%;
+    margin: 0 auto;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.6rem;
+    z-index: 1;
+  }
+  .image-fadeaway {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    -webkit-transition: background 1s ease-in;
+    transition: background 1s ease-in;
+  }
 }
 
 .about {
-  width: 65%;
+  width: 97%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto 4rem;
+  color: black;
 }
 
 .about__content {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  display: inline-block;
-  color: grey;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: block;
+  color: black;
   padding: 0;
-  width: 47%;
+  width: 100%;
+}
+
+.about__heading {
+  font-size: 1.3rem;
+}
+
+.about__sub-heading {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .about__text {
@@ -177,25 +244,70 @@ img {
   font-size: 1rem;
   font-weight: 300;
   text-transform: none;
-  text-align: left;
+  margin-bottom: 1rem;
 }
 
 .about__text--black {
   color: black;
 }
 
+@media screen and (min-width: 900px) {
+  .about {
+    width: 65%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto 4rem;
+  }
+  .about__content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    display: inline-block;
+    color: grey;
+    padding: 0;
+    width: 47%;
+  }
+  .about__text {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: none;
+    text-align: left;
+  }
+  .about__text--black {
+    color: black;
+  }
+}
+
 .motion {
-  width: 80%;
+  width: 97%;
   margin: 0 auto;
 }
 
 .motion-video {
   width: 100%;
-  z-index: 2;
+}
+
+@media screen and (min-width: 900px) {
+  .motion {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .motion-video {
+    width: 100%;
+  }
 }
 
 .recipe {
-  width: 55%;
+  width: 97%;
   margin: 0 auto;
 }
 
@@ -231,8 +343,8 @@ img {
 }
 
 .recipe-figure__image {
-  width: 60%;
-  height: 60%;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -302,8 +414,100 @@ img {
   left: -2rem;
 }
 
+@media screen and (min-width: 900px) {
+  .recipe {
+    width: 55%;
+    margin: 0 auto;
+  }
+  .recipe-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .recipe-headings {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .recipe-time {
+    margin-bottom: 1rem;
+  }
+  .recipe-item__ingredient {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  .recipe-figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto 2rem;
+  }
+  .recipe-figure__image {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .recipe-serves {
+    margin: 1rem 0 2rem;
+  }
+  .recipe-ingredients {
+    margin: 2rem 0 1rem;
+  }
+  .recipe-ingredients__main {
+    margin-bottom: 1rem;
+  }
+  .recipe-ingredients__list {
+    margin-bottom: 1rem;
+  }
+  .recipe-ingredients__ingredient {
+    display: block;
+    margin: 0;
+  }
+  .recipe-ingredients__side {
+    margin-bottom: 1rem;
+  }
+  .recipe-extras__title {
+    margin-bottom: 1rem;
+  }
+  .recipe-extras__item {
+    margin-bottom: 1rem;
+  }
+  .recipe-method {
+    margin-bottom: 3rem;
+  }
+  .recipe-method__list {
+    margin-bottom: 1rem;
+    counter-reset: method-counter;
+  }
+  .recipe-method__list-item {
+    margin: 1rem 0 0 3rem;
+    position: relative;
+    display: block;
+  }
+  .recipe-method__list-item::before {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    counter-increment: method-counter;
+    content: counter(method-counter) ".";
+    width: 1rem;
+    height: auto;
+    position: absolute;
+    left: -2rem;
+  }
+}
+
 .contact {
-  width: 45%;
+  width: 97%;
   margin: 0 auto 5rem;
 }
 
@@ -317,6 +521,49 @@ img {
   font-size: 0.9rem;
   line-height: 1.6rem;
   margin-bottom: 1.5rem;
+}
+
+.form {
+  width: 100%;
+}
+
+.form-item__name, .form-item__email, .form-item__subject, .form-item__message {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  height: 2rem;
+  background-color: whitesmoke;
+  border: none;
+  -webkit-box-shadow: 0 0 0 0.01rem #747474;
+          box-shadow: 0 0 0 0.01rem #747474;
+  padding-left: 0.5rem;
+}
+
+.form-item__message {
+  height: 5rem;
+  border-radius: none;
+  padding: 0.3rem 0.5rem;
+}
+
+.form-item__submit {
+  padding: 0.2rem 0.5rem;
+}
+
+@media screen and (min-width: 900px) {
+  .contact {
+    width: 45%;
+    margin: 0 auto 5rem;
+  }
+  .contact-header {
+    font-size: 1.65rem;
+    margin-bottom: 1.8rem;
+  }
+  .contact-text {
+    width: 96%;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .social-links {
@@ -392,9 +639,19 @@ img {
 
 .acknowledgement {
   text-align: center;
-  width: 45%;
+  width: 90%;
   margin: 0 auto;
   font-size: 0.8rem;
-  margin-top: 2rem;
+  margin-top: 1.2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .acknowledgement {
+    text-align: center;
+    width: 45%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+  }
 }
 /*# sourceMappingURL=Main.css.map */

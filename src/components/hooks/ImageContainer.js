@@ -13,10 +13,9 @@ const ImageContainer = props => {
       }
     }
   });
-return (
-    <div
-      ref={ref}
-    >
+
+  return (
+    <div ref={ref} >
       <img 
         className="image" 
         loading="lazy" 
@@ -26,10 +25,11 @@ return (
         width={props.width}
       />
       <div 
-        className="fadeAway"
+        className="image-fadeaway"
         style={{ background: `${ isVisible ? 'rgba(255, 255, 255, 0)' : 'rgba(255, 255, 255, 1)' }`}}
       ></div>
     </div>
   );
 };
+
 export default ImageContainer;

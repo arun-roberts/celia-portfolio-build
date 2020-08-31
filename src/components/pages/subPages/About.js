@@ -4,7 +4,8 @@ const About = () => {
     return (
         <div className="about">
             <div className="about__content">
-                <h4 className="about__heading">Celia Dowzer - Food Stylist with <span className="about__text--black">FOOD ON FILM</span></h4>
+                <h4 className="about__heading">Celia Dowzer</h4> 
+                <h5 className="about__sub-heading">Food Stylist with <span className="about__text--black">FOOD ON FILM</span></h5>
                 <p className="about__text">
                     Celia is a professional food and prop stylist based in Melbourne, Australia. Originally from a background as a scientist, Celia is a freelance food stylist and has 20 years of experience working across advertising and packaging, stills and motion.
                     <br/>
