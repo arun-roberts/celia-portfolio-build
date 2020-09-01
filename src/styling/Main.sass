@@ -11,6 +11,8 @@
     font-weight: 300
     transition: color 0.08s ease
 
+.one-b
+    margin-bottom: 1rem
 
 body 
     background-color: rgb(255, 255, 255)
@@ -101,12 +103,15 @@ li, .social-links__item
         letter-spacing: 0.1rem
         position: relative
 
+        &--active 
+            color: grey
 
         &::after 
             content: ''
             position: absolute
             display: block
             width: 100%
+            bottom: 0
             height: 0.2rem
             background-color: currentColor
             transform: scaleX(0)
@@ -117,29 +122,47 @@ li, .social-links__item
             transition: transform 0.5s ease
 
 
-        &--active 
-            color: grey
-
 .main-nav__link, .main-link 
     text-decoration: none
 
 .main-nav__link:hover, .main-header:hover 
     color: grey
 
-@media screen and (min-width: 900px)
+@media screen and (min-width: 600px)
     .main-nav 
-    margin-bottom: 3rem
+        // margin-bottom: rem
 
-    &__list 
-        margin: 1.5rem 0 2.2rem
+        &__list 
+            margin: 1.5rem auto 2.2rem
+            width: 33rem
 
 
-    &__link 
-        font-size: 0.95rem
-        font-weight: 600
-        letter-spacing: 0.1rem
-        position: relative
+        &__link 
+            font-size: 1.3rem
+            font-weight: 600
+            letter-spacing: 0.1rem
+            position: relative
 
+            &::after 
+                bottom: -0.1rem
+
+@media screen and (min-width: 930px)
+    .main-nav 
+        margin-bottom: 2.5rem
+
+        &__list 
+            margin: 1.5rem 0 2.2rem
+            width: 100%
+
+
+        &__link 
+            font-size: 1.3rem
+            font-weight: 600
+            letter-spacing: 0.1rem
+            position: relative
+
+            &::after 
+                bottom: -0.17rem
 
 // ========================================================
 //                         GALLERY
@@ -243,17 +266,42 @@ li, .social-links__item
 
 @media screen and (min-width: 900px)
     .about 
+        width: 80%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin: 4rem auto 4rem
+
+        &__content 
+            flex: 0 1 auto
+            display: inline-block
+            padding: 0
+            width: 47%
+
+
+        &__text 
+            width: 100%
+            font-size: 1rem
+            font-weight: 300
+            text-transform: none
+            text-align: left
+
+
+            &--black 
+                color: black
+
+@media screen and (min-width: 1200px)
+    .about 
         width: 65%
         display: flex
         flex-direction: row
         justify-content: space-between
-        margin: 0 auto 4rem
+        margin: 4rem auto 4rem
 
 
         &__content 
             flex: 0 1 auto
             display: inline-block
-            color: grey
             padding: 0
             width: 47%
 
@@ -401,10 +449,13 @@ li, .social-links__item
 
             &-instruction
 
+@media screen and (min-width: 808px)
+    .recipe 
+        width: 45rem
+        margin: 0 auto
+
 @media screen and (min-width: 900px)
     .recipe 
-        width: 55%
-        margin: 0 auto
 
 
         &-body
@@ -515,27 +566,40 @@ li, .social-links__item
     width: 97%
     margin: 0 auto 5rem
 
+    &-intro
+        width: 100%
+        flex: 0 1 auto
 
-    &-header 
-        font-size: 1.65rem
-        margin-bottom: 1.8rem
+        &__header 
+            font-size: 1.65rem
+            margin-bottom: 1.1rem
 
+        &__text 
+            width: 96%
+            font-size: 0.9rem
+            line-height: 1.6rem
+            margin-bottom: 1rem
 
-    &-text 
-        width: 96%
-        font-size: 0.9rem
-        line-height: 1.6rem
-        margin-bottom: 1.5rem
+            &-item
+                display: block
+                width: 100%
+
+    &-form
+        width: 100%
+        
 
 .form
     width: 100%
+    
 
     &-item
+        position: relative
 
         &__name, &__email, &__subject, &__message
             display: block
             width: 100%
-            margin-bottom: 1rem
+            margin-bottom: 1.8rem
+            margin-top: 0.6rem
             height: 2rem
             background-color: rgb(245, 245, 245)
             border: none
@@ -543,21 +607,41 @@ li, .social-links__item
             padding-left: 0.5rem
 
         &__message
-            height: 5rem
+            height: 10rem
+            resize: none
+            overflow: auto
             border-radius: none
             padding: 0.3rem 0.5rem
 
-        &__submit
-            padding: 0.2rem 0.5rem
+        &__label
+            margin: 2rem 0 0.6rem
 
-    
+        &__submit
+            padding: 0.4rem 0.8rem
+            cursor: pointer
+            position: relative
+            background: white
+            border-radius: 0.3rem
+            transition: all 0.3s ease
+
+            &:hover
+                background-color: black
+                color: white
             
+    
+.validEmail
+    position: absolute
+    margin-left: 0.3rem
+    font-size: 0.8rem
+    bottom: -1.3rem
         
 
 @media screen and (min-width: 900px)
     .contact 
-        width: 45%
-        margin: 0 auto 5rem
+        width: 80%
+        margin: 3rem auto 5rem
+        display: flex
+        justify-content: space-evenly
 
 
         &-header 
@@ -570,6 +654,77 @@ li, .social-links__item
             font-size: 0.9rem
             line-height: 1.6rem
             margin-bottom: 1.5rem
+    
+            
+
+        &-intro
+            width: 40%
+            flex: 0 1 auto
+
+            &__header 
+                font-size: 1.65rem
+                margin-bottom: 1.8rem
+
+
+            &__text 
+                width: 96%
+                font-size: 0.9rem
+                line-height: 1.6rem
+                margin-bottom: 1.5rem
+                
+                &-item
+                    margin-bottom: 1rem
+
+        &-form
+            width: 60%
+            
+
+    .form
+        width: 100%
+        
+
+        &-item
+            position: relative
+
+            &__name, &__email, &__subject, &__message
+                display: block
+                width: 100%
+                margin-bottom: 1.8rem
+                margin-top: 0.6rem
+                height: 2rem
+                background-color: rgb(245, 245, 245)
+                border: none
+                box-shadow: 0 0 0 0.01rem  rgb(116, 116, 116)
+                padding-left: 0.5rem
+
+            &__message
+                height: 10rem
+                resize: none
+                overflow: auto
+                border-radius: none
+                padding: 0.3rem 0.5rem
+
+            &__label
+                margin: 2rem 0 0.6rem
+
+            &__submit
+                padding: 0.4rem 0.8rem
+                cursor: pointer
+                position: relative
+                background: white
+                border-radius: 0.3rem
+                transition: all 0.3s ease
+
+                &:hover
+                    background-color: black
+                    color: white
+                
+        
+    .validEmail
+        position: absolute
+        margin-left: 0.3rem
+        font-size: 0.8rem
+        bottom: -1.3rem
 
 
 // ========================================================

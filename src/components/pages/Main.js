@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Switch, Route } from "react-router-dom"
 import { Header, Nav, Footer, Portfolio, About, Contact, Motion, InTheKitchen } from '../index'
 import '../../styling/Main.css'
