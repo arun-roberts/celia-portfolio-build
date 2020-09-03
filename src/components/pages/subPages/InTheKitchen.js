@@ -1,13 +1,25 @@
 import React, { useContext } from 'react'
 import BlogContext from '../../../context/BlogContext'
 
+const findWidth = () => {
+    let currentWidth = window.innerWidth;
+    if(currentWidth < 600) {
+        return 'small'
+    } else if (currentWidth < 1500) {
+        return 'medium'
+    } else {
+        return 'large'
+    }
+} 
+
 const About = () => {
     const { blogPosts } = useContext(BlogContext)
+    let imgSize = findWidth();
 
     return (
         <>
             <div className="in-the-kitchen">
-                {blogPosts.map(({ imgUrl, imgDescription, blogText, imgWidth, imgHeight }) => (
+                {blogPosts.map(({ imgDescription, blogText, img: { [imgSize]: { imgUrl, imgWidth, imgHeight } } }) => (
                     <div className="recipe">
                         <div className="recipe-headings">
                             <h2 className="recipe-headings__main">{blogText.heading}</h2>

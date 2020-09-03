@@ -29,6 +29,8 @@ body {
 .main-header, .main-subheader, .main-nav__list {
   text-transform: uppercase;
   text-align: center;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 li, .social-links__item {
@@ -101,6 +103,8 @@ li, .social-links__item {
   font-weight: 600;
   letter-spacing: 0.1rem;
   position: relative;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .main-nav__link--active {
@@ -117,15 +121,13 @@ li, .social-links__item {
   background-color: currentColor;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .main-nav__link:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .main-nav__link, .main-link {
@@ -786,12 +788,12 @@ li, .social-links__item {
   height: 100%;
   background-color: gray;
   border-radius: 50%;
+  -webkit-transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-out;
 }
 
 .social-links__link:hover::before {
   background-color: #1b1b1b;
-  -webkit-transition: background-color 0.4s ease-out;
-  transition: background-color 0.4s ease-out;
 }
 
 .social-links__link::after {
@@ -801,6 +803,8 @@ li, .social-links__item {
   height: 100%;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 50%;
+  -webkit-transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-out;
   z-index: 2;
 }
 
@@ -816,8 +820,6 @@ li, .social-links__item {
 }
 
 .social-links__list:hover .social-links__link::after {
-  -webkit-transition: background-color 0.4s ease-out;
-  transition: background-color 0.4s ease-out;
   background-color: rgba(255, 255, 255, 0.445);
 }
 

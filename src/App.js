@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { Home, Main } from './components'
+import RecipeLogin from './components/pages/subPages/RecipeLogin'
 
 const App = () => {
     return (
@@ -11,6 +12,9 @@ const App = () => {
             </Route>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/example">
+              <RecipeLogin />
             </Route>
           </Switch>
         </Router>

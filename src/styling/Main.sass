@@ -28,6 +28,7 @@ body
 .main-header, .main-subheader, .main-nav__list 
     text-transform: uppercase
     text-align: center
+    transition: color 0.3s ease
 
 
 li, .social-links__item 
@@ -102,6 +103,8 @@ li, .social-links__item
         font-weight: 600
         letter-spacing: 0.1rem
         position: relative
+        transition: all 0.5s ease
+        
 
         &--active 
             color: grey
@@ -115,11 +118,11 @@ li, .social-links__item
             height: 0.2rem
             background-color: currentColor
             transform: scaleX(0)
-
+            transition: all 0.5s ease
 
         &:hover::after 
             transform: scaleX(1)
-            transition: transform 0.5s ease
+            
 
 
 .main-nav__link, .main-link 
@@ -130,7 +133,6 @@ li, .social-links__item
 
 @media screen and (min-width: 600px)
     .main-nav 
-        // margin-bottom: rem
 
         &__list 
             margin: 1.5rem auto 2.2rem
@@ -763,10 +765,10 @@ li, .social-links__item
             height: 100%
             background-color: gray
             border-radius: 50%
+            transition: background-color 0.4s ease-out
             
         &:hover::before 
             background-color: rgb(27, 27, 27)
-            transition: background-color 0.4s ease-out
 
         &::after 
             content: ""
@@ -775,6 +777,7 @@ li, .social-links__item
             height: 100%
             background-color: rgba(255, 255, 255, 0)
             border-radius: 50%
+            transition: background-color 0.4s ease-out
             z-index: 2
                 
     &__icon 
@@ -786,7 +789,6 @@ li, .social-links__item
         z-index: 3
 
     &__list:hover .social-links__link::after 
-        transition: background-color 0.4s ease-out
         background-color: rgba(255, 255, 255, 0.445)
 
 .acknowledgement 

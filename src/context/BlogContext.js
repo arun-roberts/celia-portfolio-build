@@ -2,11 +2,24 @@ import React from 'react'
 
 export default React.createContext({
     blogPosts: [
-        {
-            imgUrl: "https://www.dropbox.com/s/7in21luz80daxpu/BeetrootHummusRecipe%20copy.jpg?raw=1",
+        {   img: {
+                small: {
+                    imgUrl: "https://www.dropbox.com/s/9o1sip44vkcoquw/BeetrootHummusRecipeS.jpg?raw=1",
+                    imgWidth: 400,
+                    imgHeight: 267
+                },
+                medium: {
+                    imgUrl: "https://www.dropbox.com/s/msqgloeljc5nqg5/BeetrootHummusRecipeM.jpg?raw=1",
+                    imgWidth: 800,
+                    imgHeight: 533
+                },
+                large: {
+                    imgUrl: "https://www.dropbox.com/s/67kk74uz35j2mi1/BeetrootHummusRecipeLGE.jpg?raw=1",
+                    imgWidth: 2295,
+                    imgHeight: 1531
+                }
+            },
             imgDescription: 'Beetroot & White Bean Hummus',
-            imgWidth: '2295',
-            imgHeight: '2918',
             blogText: { 
                 heading: 'Beetroot & White Bean Hummus',
                 sectionHeadings: {
@@ -35,10 +48,24 @@ export default React.createContext({
             id: 2
         },
         {
-            imgUrl: "https://www.dropbox.com/s/ri83miaeg5i36ar/ZucFrittersRecipe%20copy.JPG?raw=1",
+            img: {
+                small: {
+                    imgUrl: "https://www.dropbox.com/s/3gh5od1aow99gb5/ZucFrittersRecipe%20S.JPG?raw=1",
+                    imgWidth: 400,
+                    imgHeight: 267
+                },
+                medium: {
+                    imgUrl: "https://www.dropbox.com/s/q8kkm3f4soaam4j/ZucFrittersRecipe%20M.JPG?raw=1",
+                    imgWidth: 800,
+                    imgHeight: 533
+                },
+                large: {
+                    imgUrl: "https://www.dropbox.com/s/9t9wmozbr2n2wbj/ZucFrittersRecipe%20LGE.JPG?raw=1",
+                    imgWidth: 2688,
+                    imgHeight: 1792
+                }
+            },
             imgDescription: 'Zucchini Fritters',
-            imgWidth: '2688',
-            imgHeight: '4032',
             blogText: { 
                 heading: 'Pea & Zucchini Fritters',
                 subheading: 'with Avocado & Feta Whip',
@@ -66,10 +93,24 @@ export default React.createContext({
             id: 1
         },
         {
-            imgUrl: "https://www.dropbox.com/s/3hdm9844tlhz7fk/ParsnipSoupRecipe%20copy.jpg?raw=1",
+            img: {
+                small: {
+                    imgUrl: "https://www.dropbox.com/s/9ocvmvybd4y8oau/ParsnipSoupRecipe%20S.jpg?raw=1",
+                    imgWidth: 400,
+                    imgHeight: 267
+                },
+                medium: {
+                    imgUrl: "https://www.dropbox.com/s/czrtti0ct1qq4zb/ParsnipSoupRecipe%20M.jpg?raw=1",
+                    imgWidth: 800,
+                    imgHeight: 533
+                },
+                large: {
+                    imgUrl: "https://www.dropbox.com/s/2mspsjkzju2szin/ParsnipSoupRecipe%20LGE.jpg?raw=1",
+                    imgWidth: 2688,
+                    imgHeight: 1792
+                }
+            },
             imgDescription: 'Parsnip Soup',
-            imgWidth: '4032',
-            imgHeight: '2688',
             blogText: { 
                 heading: 'Parsnip, Ginger & Turmeric Soup',
                 sectionHeadings: {
