@@ -62,7 +62,7 @@ const About = () => {
                                         ? blogText.extras.map(i => (
                                                 <div className="recipe-extras__item">
                                                     <h4 className="recipe-extras__title">{i.title}:</h4>
-                                                    {i.items.map(e => <p className="recipe-extra">{e}</p>)}
+                                                    {i.items.map(e => <p className="recipe-extras__ingredient">{e}</p>)}
                                                 </div>
                                             ) 
                                         )
@@ -77,6 +77,15 @@ const About = () => {
                                     <li className="recipe-method__list-item">{i}</li>
                                 ))}
                             </ol>
+                            {blogText.sides && blogText.sides.map(side => (<>
+                                    <h4 className="recipe-method__heading">{side.title}</h4>
+                                    <ol className="recipe-method__list">
+                                        {side.method.map(i => (
+                                            <li className="recipe-method__list-item">{i}</li>
+                                        ))}
+                                    </ol>
+                                </>))
+                            }
                             <h4 className="recipe-method__serve">To serve:</h4>
                             <p className="recipe-method__serve-instruction">
                                 {blogText.serve}

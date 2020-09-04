@@ -4,6 +4,70 @@ export default React.createContext({
     blogPosts: [
         {   img: {
                 small: {
+                    imgUrl: "https://www.dropbox.com/s/28he6g0hu7b49e6/YoghurtCakeS.JPG?raw=1",
+                    imgWidth: 400,
+                    imgHeight: 267
+                },
+                medium: {
+                    imgUrl: "https://www.dropbox.com/s/wcz12h3oagtxrrr/YoghurtCakeM.JPG?raw=1",
+                    imgWidth: 800,
+                    imgHeight: 533
+                },
+                large: {
+                    imgUrl: "https://www.dropbox.com/s/3w4a8h38yea7uxf/YoghurtCakeLGE.JPG?raw=1",
+                    imgWidth: 2937,
+                    imgHeight: 1958
+                }
+            },
+            imgDescription: 'Lemon Yoghurt Cake with Pear Crisps',
+            blogText: {
+                heading: 'Lemon Yoghurt Cake with Pear Crisps',
+                sectionHeadings: {
+                    prepTime: 20,
+                    cookTime: '1 hour for cake and 1 hour for crisps'
+                },
+                ingredients: {
+                    main: [
+                        '180g softened butter', 
+                        '1 1/2 cups sugar', 
+                        '2 teaspoons finely grated lemon zest', 
+                        '3 eggs', 
+                        '2 1/4 cups self raising flour', 
+                        '280ml plain greek yogurt',
+                        '2 teaspoons vanilla paste'
+                    ]
+                },
+                extras: [
+                    {title: 'Ingredients for Lemon icing', items: ['3 cups sifted icing sugar', '2 tablespoons lemon juice']},
+                    {title: 'Ingredients for Pear Crisp garnish', items: ['1 firm corella pear', 'Juice of 1/2 a lemon']}
+                ],
+                method: [
+                    'Preheat oven to 180°C.', 
+                    'Grease a 2ltr capacity bunt or ring form with butter or cooking spray and dust with plain flour.',
+                    'Cream butter and sugar in a mixer. With mixer on high speed, add zest and eggs one at a time and beat until mixture is pale and fluffy.',
+                    'Turn down mixer to a slow speed and stir in the vanilla paste and then alternating spoonfuls of flour and yoghurt. Once  all ingredients are combined, turn mixer to a higher speed and beat until mixture is pale and creamy.',
+                    'Spoon mixture into the prepared form.',
+                    'Bake cake for approximately 1 hour or until a skewer comes out clean when tested.',
+                    'Rest cake in pan for 5 minutes before turning out onto a wire rack to cool completely.',
+                    'For the icing, mix together the icing sugar and lemon juice to form a thick paste and spoon over the top of the cake.'
+                ],
+                sides: [
+                    {
+                        title: 'Oven dried Pear Crisps:', 
+                        method: [
+                            'Preheat oven to 120°C. Cut the pear in half lengthways and starting with each cut slide, slice the pear into 2mm thin slices using a mandolin.',
+                            'Dip the slices into lemon juice and arrange on a wire rack. Place rack in oven and dry out the slices for approximately 1 hour or until they feel dry and are starting to go crispy.',
+                            'Cool completely before using to decorate the cake. Crisps can be stored in an airtight container for a few days.'
+                        ]
+                    }
+                    
+                ],
+                serve: 'Spread hummus into a shallow bowl, drizzle with olive oil and top with garnishes and serve with pitta chips or warm bread.'
+            },
+            id: 3
+        },
+        {   img: {
+                small: {
                     imgUrl: "https://www.dropbox.com/s/9o1sip44vkcoquw/BeetrootHummusRecipeS.jpg?raw=1",
                     imgWidth: 400,
                     imgHeight: 267
@@ -20,7 +84,7 @@ export default React.createContext({
                 }
             },
             imgDescription: 'Beetroot & White Bean Hummus',
-            blogText: { 
+            blogText: {
                 heading: 'Beetroot & White Bean Hummus',
                 sectionHeadings: {
                     prepTime: 10,

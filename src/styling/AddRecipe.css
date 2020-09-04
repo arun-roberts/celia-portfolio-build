@@ -1,0 +1,46 @@
+.add-recipe-form {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.add-recipe-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.add-recipe-item__input {
+  width: 70%;
+  height: 1.5rem;
+  padding: 0 0.3rem;
+}
+
+.add-recipe-item__textarea {
+  width: 70%;
+  height: 5rem;
+  resize: none;
+  padding: 0.1rem 0.3rem;
+}
+
+.add-recipe-extras {
+  width: 70%;
+}
+
+.add-recipe-extras__title {
+  width: 100%;
+  height: 1.5rem;
+  padding: 0 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.add-recipe-extras__textarea {
+  width: 100%;
+  resize: none;
+  padding: 0.1rem 0.3rem;
+  margin-bottom: 0.8rem;
+}
+/*# sourceMappingURL=AddRecipe.css.map */

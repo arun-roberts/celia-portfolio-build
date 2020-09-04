@@ -477,6 +477,10 @@ li, .social-links__item {
   left: -2rem;
 }
 
+.recipe-method__serve {
+  margin-bottom: 1rem;
+}
+
 @media screen and (min-width: 808px) {
   .recipe {
     width: 45rem;
@@ -531,6 +535,7 @@ li, .social-links__item {
   .recipe-ingredients__ingredient {
     display: block;
     margin: 0;
+    margin-left: 1rem;
   }
   .recipe-ingredients__side {
     margin-bottom: 1rem;
@@ -540,6 +545,9 @@ li, .social-links__item {
   }
   .recipe-extras__item {
     margin-bottom: 1rem;
+  }
+  .recipe-extras__ingredient {
+    margin-left: 1rem;
   }
   .recipe-method {
     margin-bottom: 3rem;
@@ -569,6 +577,12 @@ li, .social-links__item {
     height: auto;
     position: absolute;
     left: -2rem;
+  }
+  .recipe-method__serve {
+    margin-bottom: 1rem;
+  }
+  .recipe-method__serve-instruction {
+    margin-left: 1rem;
   }
 }
 
