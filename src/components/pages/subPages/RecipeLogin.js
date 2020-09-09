@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Link,
@@ -111,9 +110,9 @@ function PublicPage() {
   return <h3>Public</h3>;
 }
 
-function ProtectedPage() {
-  return <h3>Protected</h3>;
-}
+// function ProtectedPage() {
+//   return <h3>Protected</h3>;
+// }
 
 function LoginPage() {
   let history = useHistory();

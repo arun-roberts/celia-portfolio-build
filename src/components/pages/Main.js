@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route } from "react-router-dom"
-import { Header, Nav, Footer, Portfolio, About, Contact, Motion, InTheKitchen } from '../index'
+import { Header, Nav, Footer, Portfolio, About, Contact, Motion, InTheKitchen, RecipeDisplay } from '../index'
 import '../../styling/Main.css'
 
 const Main = () => {
@@ -12,7 +12,8 @@ const Main = () => {
                 <Switch>
                     <Route path="/portfolio" children={<Portfolio />} />
                     <Route path="/motion" children={<Motion />} />
-                    <Route path="/inthekitchen" children={<InTheKitchen />} />
+                    <Route exact path="/inthekitchen" children={<InTheKitchen />} />
+                    <Route path={"/inthekitchen/:id"} children={<RecipeDisplay />} />
                     <Route path="/about" children={<About />} />
                     <Route path="/contact" children={<Contact />} />
                 </Switch>

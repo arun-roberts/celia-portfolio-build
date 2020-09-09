@@ -12,7 +12,7 @@ const findWidth = () => {
     }
 } 
 
-const About = () => {
+const InTheKitchen = () => {
     const { blogPosts } = useContext(BlogContext)
     let imgSize = findWidth();
 
@@ -98,4 +98,4 @@ const About = () => {
     )
 }
 
-export default About
+export default InTheKitchen

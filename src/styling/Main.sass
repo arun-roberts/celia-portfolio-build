@@ -347,8 +347,20 @@ li, .social-links__item
 // ========================================================
 
 
-.recipe 
-    width: 97%
+
+.kitchen-menu
+    width: 30%
+
+.kitchen-list
+    position: fixed
+    overflow: scroll
+
+    &-item
+        display: block
+        margin-bottom: 0.8rem
+
+.recipe     
+    width: 70%
     margin: 0 auto
 
 
@@ -450,6 +462,32 @@ li, .social-links__item
             margin-bottom: 1rem
 
             &-instruction
+
+
+.kitchen-nav
+    
+    // display: block
+
+    &-list
+        width: 70%
+        margin: 0 auto
+        display: flex
+        align-items: center 
+
+    &__list-item
+        width: 30%
+        text-align: center
+
+        &--main
+            border-left: 0.2rem solid black
+            border-right: 0.2rem solid black
+    
+    &__link
+        text-decoration: none
+        color: black
+        display: flex
+        justify-content: space-evenly
+        align-items: center
 
 @media screen and (min-width: 808px)
     .recipe 

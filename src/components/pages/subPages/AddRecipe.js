@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react'
-import mongoose from 'mongoose'
+// import mongoose from 'mongoose'
 import { Dropbox } from 'dropbox'
 import '../../../styling/AddRecipe.css'
 
-const accessToken = 'sl.AhDlscue3z27HB9385I_g-Glinfo8KBoFXqxJPDnb8bf09DrLmqqSE_qonCfHHUZlQ2s_n0ezaAJP-COe490_fiHVspbGQeN9cJhCpOAwin9dFDn_yHLXLWAyzFJbDsiuLPelBc'
+const accessToken = 'sl.AhXPTXLStQdc2QVvbfdmx8Xe-6F5YlHLomP6WXVmw5VLu0RycRK9n09Z4OXZfTuspYo0JHfgXisZQrt0q9sADWbeJWaHK0DpXsld-sYWN7mFvCjADM8Zc5eQ--ASVc6trcECdBYI'
 
 const dbx = new Dropbox({
     accessToken,
@@ -12,15 +12,18 @@ const dbx = new Dropbox({
 })
 
 const getFiles = async () => {
-    const response = await dbx.filesGetThumbnailBatch({  
-        entries: [{  
+    const response = await dbx.filesGetMetadata({  
           path: '/500px/19Icecream-tub.jpg',  
-        //   size: 'w32h32',  
-          format: 'png',  
-        }]  
+          include_media_info: true
       })
-    const maybe = await response.json()
-    return maybe
+    return response
+}
+const getOtherFiles = async () => {
+    const response = await dbx.sharingCreateSharedLinkWithSettings({  
+          path: '/500px/19Icecream-tub.jpg',  
+        //   include_media_info: true
+      })
+    return response
 }
 // mongoose.connect("mongodb+srv://celia_arun:<password>@cluster0.wa86j.mongodb.net/<dbname>?retryWrites=true&w=majority", { 
 //     useNewUrlParser: true,
@@ -44,7 +47,8 @@ const AddRecipe = () => {
     const [ method, setMethod ] = useState('')
     const [ toServe, setToServe ] = useState('')
     const image = getFiles()
-    const [ showImage, setShowImage ] = useState(false)
+    const image2 = getOtherFiles()
+    // const [ showImage, setShowImage ] = useState(false)
     const recipeSubmit = e => {
         e.preventDefault()
         // sides = sides.map(({ingredients}) => ingredients.split(''))
@@ -58,17 +62,17 @@ const AddRecipe = () => {
             toServe 
         })
     }
-    const addSides = () => {
-        console.dir(sides.one.ingredients)
-    }
+    // const addSides = () => {
+    //     console.dir(sides.one.ingredients)
+    // }
 
 
     return (
         <div className="add-recipe">
-            <button onClick={() => console.log(typeof image)}>Click me</button>
-            {showImage && <img loading="lazy" src={`data:image/png;base64,${image}`} />}
+            <button onClick={() => { console.log(image2) } }>Click me</button>
+            {/* {showImage && <img loading="lazy" src={`data:image/png;base64,`} />} */}
             <form className="add-recipe-form" onSubmit={recipeSubmit}>
-                // dropbox image interface x 3
+                {/* // dropbox image interface x 3 */}
                 <div className="add-recipe-item">
                     <label className="add-recipe-item__label" >Recipe title</label>
                     <input 

@@ -1,0 +1,50 @@
+.recipe-container {
+  width: 70%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: 15rem;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.recipe-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.recipe-item__figure {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.recipe-item__image {
+  height: 100%;
+  display: block;
+  -webkit-transition: opacity ease-out 250ms;
+  transition: opacity ease-out 250ms;
+}
+
+.recipe-item:hover .recipe-item__image {
+  opacity: .4;
+}
+
+.recipe-item__header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: black;
+  opacity: 0;
+  -webkit-transition: opacity ease-out 250ms;
+  transition: opacity ease-out 250ms;
+  text-align: center;
+}
+
+.recipe-item:hover > .recipe-item__header {
+  opacity: 1;
+}
+/*# sourceMappingURL=InTheKitchenMenu.css.map */

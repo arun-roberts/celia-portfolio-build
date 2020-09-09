@@ -369,8 +369,22 @@ li, .social-links__item {
   }
 }
 
+.kitchen-menu {
+  width: 30%;
+}
+
+.kitchen-list {
+  position: fixed;
+  overflow: scroll;
+}
+
+.kitchen-list-item {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
 .recipe {
-  width: 97%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -479,6 +493,41 @@ li, .social-links__item {
 
 .recipe-method__serve {
   margin-bottom: 1rem;
+}
+
+.kitchen-nav-list {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.kitchen-nav__list-item {
+  width: 30%;
+  text-align: center;
+}
+
+.kitchen-nav__list-item--main {
+  border-left: 0.2rem solid black;
+  border-right: 0.2rem solid black;
+}
+
+.kitchen-nav__link {
+  text-decoration: none;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 808px) {
