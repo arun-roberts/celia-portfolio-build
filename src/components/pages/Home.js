@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-// import { CSSTransition } from 'react-transition-group'
 import '../../styling/Home.css'
 
 const Home = () => {
@@ -19,7 +18,6 @@ const Home = () => {
                 <li></li>
                 <li></li>
             </ul>
-            {/* <CSSTransition></CSSTransition> */}
         </div>
     )
 }

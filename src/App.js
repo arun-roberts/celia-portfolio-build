@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import { Home, Main } from './components'
+import Home from './components/pages/Home'
+import Main from './Main'
 import ScrollToTop from './components/layout/ScrollToTop'
 import RecipeLogin from './components/pages/subPages/RecipeLogin'
 

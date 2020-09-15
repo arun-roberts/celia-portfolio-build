@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from "react-router-dom"
-import { Header, Nav, Footer, Portfolio, About, Contact, Motion, InTheKitchen, RecipeDisplay } from '../index'
-import '../../styling/Main.css'
+import { Header, Nav, Footer, Portfolio, About, Contact, Motion, InTheKitchen, RecipeDisplay } from './components'
+import './styling/Main.css'
 
 const Main = () => {
     return (

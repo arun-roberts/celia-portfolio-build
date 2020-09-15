@@ -1,4 +1,3 @@
-export { default as Main } from './pages/Main'
 export { default as Home } from './pages/Home'
 export { default as Header } from './layout/Header'
 export { default as Nav } from './layout/Nav'

@@ -38,8 +38,8 @@ const Contact = () => {
                     <p className="contact-intro__text"> 
                         <span className="contact-intro__text-item">Reach out to Food on Film for any enquiries.</span>
                         <span className="contact-intro__text-item">We'd love to hear from you!</span>
-                        {/* <span className="contact-intro__text-item">celia@foodonfilm.net.au</span>
-                        <span className="contact-intro__text-item">Celia 0419 557 128</span> */}
+                        {/* <span className="contact-intro__text-item">celia@foodonfilm.net.au</span> */}
+                        <span className="contact-intro__text-item">Celia 0419 557 128</span>
                     </p>
                 </div>
                 <div className="contact-form">

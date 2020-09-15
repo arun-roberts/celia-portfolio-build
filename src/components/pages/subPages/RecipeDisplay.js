@@ -26,7 +26,7 @@ const Recipe = () => {
         <>
             <div className="in-the-kitchen">
                 <div className="recipe">
-                    <div className="recipe-headings">
+                    <div className="recipe-headings mb-one">
                         <h2 className="recipe-headings__main">{blogText.heading}</h2>
                         <div className="recipe-headings__sub">
                             {blogText.subheading ? blogText.subheading : null}
@@ -35,7 +35,7 @@ const Recipe = () => {
                     <figure className="recipe-figure">
                         <img className="recipe-figure__image" loading="lazy" src={imgUrl} alt={imgDescription} width={imgWidth} height={imgHeight} />
                     </figure>
-                    <div className="recipe-time">
+                    <div className="recipe-time mb-one">
                         <h4 className="recipe-time__item">
                             Preparation time: {blogText.sectionHeadings.prepTime} minutes
                         </h4>
@@ -55,8 +55,8 @@ const Recipe = () => {
                         }
                     </p>
                     <div className="recipe-ingredients">
-                        <h4 className="recipe-ingredients__main">Ingredients:</h4>
-                        <ul className="recipe-ingredients__list">
+                        <h4 className="recipe-ingredients__main mb-one">Ingredients:</h4>
+                        <ul className="recipe-ingredients__list mb-one">
                             {blogText.ingredients.main.map(i => (
                                 <li className="recipe-ingredients__ingredient">{i}</li>
                             ))}
@@ -66,7 +66,7 @@ const Recipe = () => {
                                 blogText.extras 
                                     ? blogText.extras.map(i => (
                                             <div className="recipe-extras__item">
-                                                <h4 className="recipe-extras__title">{i.title}:</h4>
+                                                <h4 className="recipe-extras__title mb-one">{i.title}:</h4>
                                                 {i.items.map(e => <p className="recipe-extras__ingredient">{e}</p>)}
                                             </div>
                                         ) 
@@ -75,9 +75,9 @@ const Recipe = () => {
                             }
                         </div>
                     </div>
-                    <div className="recipe-method">
+                    <div className="recipe-method mb-one">
                         <h4 className="recipe-method__heading">Method:</h4>
-                        <ol className="recipe-method__list">
+                        <ol className="recipe-method__list mb-one">
                             {blogText.method.map(i => (
                                 <li className="recipe-method__list-item">{i}</li>
                             ))}
@@ -91,8 +91,10 @@ const Recipe = () => {
                                 </ol>
                             </>))
                         }
-                        <h4 className="recipe-method__serve">To serve:</h4>
-                        <p className="recipe-method__serve-instruction">
+                    </div>
+                    <div className="to-serve">
+                        <h4 className="to-serve__title mb-one">To serve:</h4>
+                        <p className="to-serve__instruction">
                             {blogText.serve}
                         </p>
                     </div>
@@ -103,8 +105,8 @@ const Recipe = () => {
                                 {
                                     previous 
                                     ? <Link className="kitchen-nav__link" to={"/inthekitchen/" + previous.id}>
-                                        <p>{"<"}</p>
-                                        <p>{previous.imgDescription.toUpperCase()}</p>
+                                        <p className="kitchen-nav__arrow">{"<"}</p>
+                                        <p className="kitchen-nav__text">{previous.imgDescription.toUpperCase()}</p>
                                     </Link> 
                                     : null
                                 }
@@ -114,8 +116,8 @@ const Recipe = () => {
                                 {
                                     next 
                                     ? <Link className="kitchen-nav__link" to={"/inthekitchen/" + next.id}>
-                                        <p>{next.imgDescription.toUpperCase()}</p>
-                                        <p>{">"}</p>
+                                        <p className="kitchen-nav__text">{next.imgDescription.toUpperCase()}</p>
+                                        <p className="kitchen-nav__arrow">{">"}</p>
                                     </Link> 
                                     : null
                                 }
