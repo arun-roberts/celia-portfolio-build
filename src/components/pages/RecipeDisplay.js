@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import BlogContext from '../../../context/BlogContext'
+import BlogContext from '../../context/BlogContext'
 
 const findWidth = () => {
     let currentWidth = window.innerWidth;
@@ -36,38 +36,33 @@ const Recipe = () => {
                         <img className="recipe-figure__image" loading="lazy" src={imgUrl} alt={imgDescription} width={imgWidth} height={imgHeight} />
                     </figure>
                     <div className="recipe-time mb-one">
-                        <h4 className="recipe-time__item">
-                            Preparation time: {blogText.sectionHeadings.prepTime} minutes
-                        </h4>
-                        <h4 className="recipe-time__item">
+                        <ul className="recipe-time__list">
                             {
-                                blogText.sectionHeadings.cookTime 
-                                    ? `Cooking time: ${blogText.sectionHeadings.cookTime} minutes`
-                                    : null
+                                blogText.sectionHeadings.map(i => <li className="recipe-time__item">{i}</li>) 
                             }
+                        </ul>
+                        <h4 className="recipe-time__item">
+                            
                         </h4>
                     </div>
-                    <p className="recipe-serves">
-                        {
-                            blogText.sectionHeadings.serves 
-                                ? `Serves: ${blogText.sectionHeadings.serves}`
-                                : null
-                        }
-                    </p>
                     <div className="recipe-ingredients">
                         <h4 className="recipe-ingredients__main mb-one">Ingredients:</h4>
                         <ul className="recipe-ingredients__list mb-one">
                             {blogText.ingredients.main.map(i => (
-                                <li className="recipe-ingredients__ingredient">{i}</li>
+                                <li className="recipe-ingredients__ingredient recipe-inset">{i}</li>
                             ))}
                         </ul>
                         <div className="recipe-extras">
                             {
                                 blogText.extras 
                                     ? blogText.extras.map(i => (
-                                            <div className="recipe-extras__item">
+                                            <div className="recipe-extras__item mb-one">
                                                 <h4 className="recipe-extras__title mb-one">{i.title}:</h4>
-                                                {i.items.map(e => <p className="recipe-extras__ingredient">{e}</p>)}
+                                                <ul>
+                                                    {
+                                                        i.items.map(e => <li className="recipe-extras__ingredient recipe-inset">{e}</li>)
+                                                    }
+                                                </ul>
                                             </div>
                                         ) 
                                     )
@@ -79,14 +74,14 @@ const Recipe = () => {
                         <h4 className="recipe-method__heading">Method:</h4>
                         <ol className="recipe-method__list mb-one">
                             {blogText.method.map(i => (
-                                <li className="recipe-method__list-item">{i}</li>
+                                <li className="recipe-method__list-item recipe-inset">{i}</li>
                             ))}
                         </ol>
                         {blogText.sides && blogText.sides.map(side => (<>
                                 <h4 className="recipe-method__heading">{side.title}</h4>
                                 <ol className="recipe-method__list">
                                     {side.method.map(i => (
-                                        <li className="recipe-method__list-item">{i}</li>
+                                        <li className="recipe-method__list-item recipe-inset">{i}</li>
                                     ))}
                                 </ol>
                             </>))
@@ -94,7 +89,7 @@ const Recipe = () => {
                     </div>
                     <div className="to-serve">
                         <h4 className="to-serve__title mb-one">To serve:</h4>
-                        <p className="to-serve__instruction">
+                        <p className="to-serve__instruction recipe-inset">
                             {blogText.serve}
                         </p>
                     </div>

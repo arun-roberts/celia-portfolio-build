@@ -1,12 +1,11 @@
-import React, { useContext, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import BlogContext from '../../../context/BlogContext'
-import '../../../styling/InTheKitchenMenu.css'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import BlogContext from '../../context/BlogContext'
+import '../../styling/InTheKitchenMenu.css'
 
 
 const InTheKitchenMenu = () => {
     const { blogPosts } = useContext(BlogContext)
-    let location = useLocation()
 
     return (
         <>

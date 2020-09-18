@@ -3,6 +3,126 @@ import React from 'react'
 export default React.createContext({
     blogPosts: [
         {   img: {
+            small: {
+                imgUrl: "https://www.dropbox.com/s/kapve2pw0nl4jpf/APC_0128S.jpg?raw=1",
+                imgWidth: 400,
+                imgHeight: 267
+            },
+            medium: {
+                imgUrl: "https://www.dropbox.com/s/e3pend51w98ni5p/APC_0128%20M.jpg?raw=1",
+                imgWidth: 800,
+                imgHeight: 533
+            },
+            large: {
+                imgUrl: "https://www.dropbox.com/s/jw6nux08430ch6w/APC_0128LGE.jpg?raw=1",
+                imgWidth: 3502,
+                imgHeight: 2335
+            }
+            },
+            imgDescription: 'Mustard Tahini Dressing',
+            blogText: {
+                heading: 'Mustard Tahini Dressing',
+                sectionHeadings: [
+                    'Preparation time: 5 minutes'
+                ],
+                ingredients: {
+                    main: [
+                        '1/4 cup hulled tahini', 
+                        '2 teaspoons dijon mustard',
+                        '2 tablespoons lemon juice',
+                        'Cold water',
+                        'Salt & Pepper'
+                    ]
+                },
+                method: [
+                    'Mix together tahini and mustard.', 
+                    'Stir in lemon juice.',
+                    'Add enough cold water to achieve desired consistency and whisk until creamy.',
+                    'Season to taste with salt & pepper.'
+                ],
+                serve: 'Use a thicker consistency dressing for dolloping on roast vegies, lamb, falafels or in wraps. If dressing a salad containing bitter leaves, add a teaspoon of honey to the mix.'
+            },
+            id: 5,
+            path: 'mustard-tahini-dressing'
+        },
+        {   img: {
+            small: {
+                imgUrl: "https://www.dropbox.com/s/87qxc7dpxzok5np/PannaCottS.jpg?raw=1",
+                imgWidth: 400,
+                imgHeight: 267
+            },
+            medium: {
+                imgUrl: "https://www.dropbox.com/s/hgag5w6vmtggfay/PannaCottM.jpg?raw=1",
+                imgWidth: 800,
+                imgHeight: 533
+            },
+            large: {
+                imgUrl: "https://www.dropbox.com/s/kjv7vm87ih8v1x2/PannaCottLGE.jpg?raw=1",
+                imgWidth: 2688,
+                imgHeight: 1792
+            }
+            },
+            imgDescription: 'Double Chocolate Panna Cotta with Blood Orange Syrup',
+            blogText: {
+                heading: 'Double Chocolate Panna Cotta',
+                subheading: 'with Blood Orange Syrup',
+                sectionHeadings: [
+                    'Preparation time: 35 minutes',
+                    'Setting time: 7 hours',
+                    'Makes: 6 servings'
+                ],
+                ingredients: {
+                    main: []
+                },
+                extras: [
+                    {
+                        title: 'Dark Chocolate Panna Cotta', 
+                        items: [
+                            '275ml thickened cream', 
+                            '90g dark chocolate, roughly chopped', 
+                            '1/2 teaspoon gelatine powder', 
+                            '30ml boiling water', 
+                            'pinch of salt'
+                        ]
+                    },
+                    {
+                        title: 'White Chocolate Panna Cotta', 
+                        items: [
+                            '275ml thickened cream', 
+                            '90g white chocolate, roughly chopped',
+                            '1/2 teaspoon gelatine powder',
+                            '30ml boiling water'
+                        ]
+                    },
+                    {title: 'Blood Orange Syrup', items: ['250ml strained fresh blood orange juice', '50g caster sugar']},
+                    {title: 'Garnish', items: ['2 blood oranges, sliced']}
+                ],
+                method: [
+                    'Starting with the dark chocolate panna cotta - place the cream in a small saucepan and bring to the boil over a medium heat. Remove from the heat and stir in the dark chocolate. Stir until chocolate is fully melted.', 
+                    'In a small cup completely dissolve gelatine in boiling water and then add this to the chocolate cream mixture. Add salt and stir well.',
+                    'Place 6 X 125ml capacity plastic dariole moulds into a muffin tray so that they are tilted on their sides.',
+                    'Divide the dark chocolate mixture evenly between the moulds. Place tray into the fridge and chill for at least 2 hours or until set.',
+                    'Repeat steps 1&2 using the white chocolate ingredients. Leave mixture to cool slightly.',
+                    'Shift moulds to the upright position and divide the white chocolate mixture between the moulds.',
+                    'Place moulds into the freezer for at least 4 hours or until set firm.',
+                    'To unmold, remove from the freezer and run a small warm knife around the inside of each mould to release the panna cotta. Turn upside down and tap onto serving plates.',
+                    'Leave panna cottas to thaw at room temperature for about an hour before serving'
+                ],
+                sides: [
+                    {
+                        title: 'Blood Orange Syrup:', 
+                        method: [
+                            'Place juice and sugar in a small saucepan. Bring to the boil, stirring until sugar has dissolved. Boil mixture for 10 minutes and set aside to cool completely.'
+                        ]
+                    }
+                    
+                ],
+                serve: 'Serve with a puddle of syrup and slices of fresh blood orange.'
+            },
+            id: 4,
+            path: 'double-chocolate-panna-cotta'
+        },
+        {   img: {
                 small: {
                     imgUrl: "https://www.dropbox.com/s/28he6g0hu7b49e6/YoghurtCakeS.JPG?raw=1",
                     imgWidth: 400,
@@ -15,17 +135,18 @@ export default React.createContext({
                 },
                 large: {
                     imgUrl: "https://www.dropbox.com/s/3w4a8h38yea7uxf/YoghurtCakeLGE.JPG?raw=1",
-                    imgWidth: 2937,
-                    imgHeight: 1958
+                    imgWidth: 2897,
+                    imgHeight: 1931
                 }
             },
             imgDescription: 'Lemon Yoghurt Cake with Pear Crisps',
             blogText: {
-                heading: 'Lemon Yoghurt Cake with Pear Crisps',
-                sectionHeadings: {
-                    prepTime: 20,
-                    cookTime: '1 hour for cake and 1 hour for crisps'
-                },
+                heading: 'Lemon Yoghurt Cake',
+                subheading: 'with Pear Crisps',
+                sectionHeadings: [
+                    'Preparation time: 20 minutes',
+                    '1 hour for cake and 1 hour for crisps'
+                ],
                 ingredients: {
                     main: [
                         '180g softened butter', 
@@ -64,7 +185,8 @@ export default React.createContext({
                 ],
                 serve: 'Spread hummus into a shallow bowl, drizzle with olive oil and top with garnishes and serve with pitta chips or warm bread.'
             },
-            id: 3
+            id: 3,
+            path: 'lemon-yoghurt-cake'
         },
         {   img: {
                 small: {
@@ -86,9 +208,9 @@ export default React.createContext({
             imgDescription: 'Beetroot & White Bean Hummus',
             blogText: {
                 heading: 'Beetroot & White Bean Hummus',
-                sectionHeadings: {
-                    prepTime: 10,
-                },
+                sectionHeadings: [
+                    'Preparation time: 10 minutes'
+                ],
                 ingredients: {
                     main: [
                         '100g cooked beetroot, roughly chopped', 
@@ -109,7 +231,8 @@ export default React.createContext({
                 ],
                 serve: 'Spread hummus into a shallow bowl, drizzle with olive oil and top with garnishes and serve with pitta chips or warm bread.'
             },
-            id: 2
+            id: 2,
+            path: 'beetroot-white-bean-hummus'
         },
         {
             img: {
@@ -133,12 +256,11 @@ export default React.createContext({
             blogText: { 
                 heading: 'Pea & Zucchini Fritters',
                 subheading: 'with Avocado & Feta Whip',
-                sectionHeadings: {
-                    prepTime: 15,
-                    cookTime: 15,
-                    serves: '4',
-                    side: 'Whip',
-                },
+                sectionHeadings: [
+                    'Preparation time: 15 minutes',
+                    'Cooking time: 15 minutes',
+                    'serves: 4',
+                ],
                 ingredients: {
                     main: ['2 cups frozen baby peas', '2 small zucchinis, grated', '1/2 cup roughly chopped mint', '80g parmesan, grated', '1 red chilli, finely chopped (optional)', '1/2 cup self raising flour', '2 large eggs, lightly beaten', 'Salt & pepper to taste', 'Olive oil for frying'],
                 },
@@ -154,7 +276,8 @@ export default React.createContext({
                 ],
                 serve: 'Serve the fritters warm with a dollop of whip and extra sprigs of mint.'
             },
-            id: 1
+            id: 1,
+            path: 'zucchini-fritters'
         },
         {
             img: {
@@ -177,12 +300,11 @@ export default React.createContext({
             imgDescription: 'Parsnip Soup',
             blogText: { 
                 heading: 'Parsnip, Ginger & Turmeric Soup',
-                sectionHeadings: {
-                    prepTime: 15,
-                    cookTime: 20,
-                    serves: '3-4',
-                    side: 'Parsnip Chips',
-                },
+                sectionHeadings: [
+                    'Preparation time: 15 minutes',
+                    'Cooking time: 20 minutes',
+                    'Serves: 3-4',
+                ],
                 ingredients: {
                     main: ['1 tablespoon olive oil', '1 brown onion, roughly chopped', '800g parsnips, peeled and roughly chopped', '100g yellow cherry tomatoes', '1/2 teaspoon red chilli flakes (optional)', '50g fresh ginger, finely grated', '30g fresh turmeric, finely grated', '2 heaped teaspoons white miso paste', '1/2 cup coconut cream', 'Salt to taste'],
                 },
@@ -200,7 +322,8 @@ export default React.createContext({
                 ],
                 serve: 'Serve warmed soup topped with parsnip chips'
             },
-            id: 0
+            id: 0,
+            path: 'parsnip-soup'
         },
         
     ]

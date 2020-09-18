@@ -26,14 +26,19 @@ body
     text-align: center
     transition: color 0.3s ease
 
-
-li, .social-links__item 
-    display: inline-block
+li
     list-style-type: none
+
+.main-nav__item, .social-links__item 
     margin: 0 0.8rem
+    display: inline-block
 
 .mb-one
     margin-bottom: 0.6rem
+
+.recipe-inset
+    margin-left: 0.4rem
+    display: block
 
 @media screen and (min-width: 900px)
     .site
@@ -47,6 +52,9 @@ li, .social-links__item
 
     .mb-one
         margin-bottom: 1rem
+
+    .recipe-inset
+        margin-left: 0.8rem
 
 // ========================================================
 //                         HEADER
@@ -359,139 +367,146 @@ li, .social-links__item
         display: block
         margin-bottom: 0.8rem
 
-// .recipe     
-//     width: 97%
-//     margin: 0 auto
+.recipe     
+    width: 97%
+    margin: 0 auto
 
+    &-time__item
+        display: block
+        margin: 0
 
-//     &-body
-//         display: flex
+    &-body
+        display: flex
 
     
-//     &-headings 
-//         text-align: center
+    &-headings 
+        text-align: center
 
 
-//     &-item__ingredient 
-//         display: block
-//         padding: 0
-//         margin: 0
+    &-item__ingredient 
+        display: block
+        padding: 0
+        margin: 0
 
 
-//     &-figure
-//         display: flex
-//         justify-content: center
-//         margin: 0 auto 2rem
+    &-figure
+        display: flex
+        justify-content: center
+        margin: 0 auto 2rem
 
 
-//         &__image
-//             width: 100%
-//             height: 100%
-//             margin: 0 auto
+        &__image
+            width: 100%
+            height: 100%
+            margin: 0 auto
 
 
-//     &-serves 
-//         margin: 1rem 0 2rem
+    &-serves 
+        margin: 1rem 0 2rem
 
 
-//     &-ingredients
-//         margin: 2rem 0 1rem
+    &-ingredients
+        margin: 2rem 0 1rem
 
 
-//         &__main
+        &__main
 
 
-//         &__list
+        &__list
 
 
-//         &__ingredient
-//             display: block
-//             margin: 0
+        &__ingredient
+            display: block
 
-//         &__list
-//             counter-reset: method-counter
+    &-method
 
-
-//             &-item
-//                 margin: 1rem 0 0 3rem
-//                 position: relative
-//                 display: block
+        &__list
+            counter-reset: method-counter
 
 
-//                 &::before 
-//                     display: flex
-//                     justify-content: flex-end
-//                     align-items: flex-end
-//                     counter-increment: method-counter
-//                     content: counter(method-counter) '.'
-//                     width: 1rem
-//                     height: auto
-//                     position: absolute
-//                     left: -2rem
+            &-item
+                margin: 0.6rem 0 0 3rem
+                position: relative
+                display: block
 
 
-// .to-serve
-//     margin-bottom: 3rem
+                &::before 
+                    display: flex
+                    justify-content: flex-end
+                    align-items: flex-end
+                    counter-increment: method-counter
+                    content: counter(method-counter) '.'
+                    width: 1rem
+                    height: auto
+                    position: absolute
+                    left: -2rem
 
 
-// .kitchen-nav
+.to-serve
+    margin-bottom: 3rem
+
+
+.kitchen-nav
     
 
-//     &-list
-//         width: 100%
-//         margin: 0 auto
-//         display: flex
-//         justify-content: center
-//         align-items: center 
+    &-list
+        width: 100%
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        align-items: center 
         
 
-//     &__list-item
-//         width: 32%
-//         margin: 0
-//         text-align: center
+    &__list-item
+        width: 32%
+        margin: 0
+        text-align: center
 
-//     &__link
-//         text-decoration: none
-//         width: 100%
-//         font-size: 0.8rem
-//         color: black
-//         display: flex
-//         justify-content: space-evenly
-//         align-items: center
+    &__link
+        text-decoration: none
+        width: 100%
+        font-size: 0.8rem
+        color: black
+        display: flex
+        justify-content: space-evenly
+        align-items: center
 
-//     &__text
-//         display: none
+    &__text
+        display: none
     
-//     &__arrow
-//         font-size: 2rem
+    &__arrow
+        font-size: 2rem
 
-// @media screen and (min-width: 808px)
-//     .recipe 
-//         width: 45rem
-//         margin: 0 auto 6rem
+@media screen and (min-width: 808px)
+    .recipe 
+        width: 45rem
+        margin: 0 auto 6rem
 
-//     .kitchen-nav__list-item--main
-//         border-left: 0.2rem solid black
-//         border-right: 0.2rem solid black
+        &-ingredients__list
 
-//     .kitchen-nav__text
-//         display: block
-//         width: 60%
 
-//     .kitchen-nav__arrow
-//         font-size: inherit
+    .kitchen-nav__list-item--main
+        border-left: 0.2rem solid black
+        border-right: 0.2rem solid black
 
-// @media screen and (min-width: 900px)
-//     .recipe 
+    .kitchen-nav__text
+        display: block
+        width: 60%
+
+    .kitchen-nav__arrow
+        font-size: inherit
+
+@media screen and (min-width: 900px)
+    .recipe 
         
-//         &-extras__ingredient
-//             margin-left: 1rem
+        &-extras__ingredient
+            margin-left: 1rem
 
-//         &-method
-//             margin-bottom: 3rem
+        &-method
+            margin-bottom: 3rem
 
-//     .kitchen-nav-list
-//         width: 70%
+    .kitchen-nav-list
+        width: 70%
         
         
 // ========================================================
@@ -519,10 +534,6 @@ li, .social-links__item
             &-item
                 display: block
                 width: 100%
-
-    &-form
-        width: 100%
-        
 
 .form
     width: 100%
@@ -579,22 +590,8 @@ li, .social-links__item
         display: flex
         justify-content: space-evenly
 
-
-        &-header 
-            font-size: 1.65rem
-            margin-bottom: 1.8rem
-
-
-        &-text 
-            width: 96%
-            font-size: 0.9rem
-            line-height: 1.6rem
-            margin-bottom: 1.5rem
-    
-            
-
         &-intro
-            width: 40%
+            width: 65%
             flex: 0 1 auto
 
             &__header 
@@ -610,10 +607,6 @@ li, .social-links__item
                 
                 &-item
                     margin-bottom: 1rem
-
-        &-form
-            width: 60%
-            
 
     .form
         width: 100%

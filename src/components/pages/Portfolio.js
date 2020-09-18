@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { XMasonry, XBlock } from 'react-xmasonry'
-import ImageContainer from '../../hooks/ImageContainer'
-import ImageContextThumb from '../../../context/ImageContextThumb'
+import ImageContainer from '../ImageContainer'
+import ImageContextThumb from '../../context/ImageContextThumb'
 
 const Portfolio = () => {
     const { images } = useContext(ImageContextThumb)

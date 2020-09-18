@@ -1,5 +1,5 @@
 import React, { useRef, useState} from "react";
-import useIntersectionObserver from "./use-intersection-observer";
+import useIntersectionObserver from "./hooks/use-intersection-observer";
 
 const ImageContainer = props => {
   const ref = useRef();

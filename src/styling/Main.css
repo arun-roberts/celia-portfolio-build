@@ -29,14 +29,22 @@ body {
   transition: color 0.3s ease;
 }
 
-li, .social-links__item {
-  display: inline-block;
+li {
   list-style-type: none;
+}
+
+.main-nav__item, .social-links__item {
   margin: 0 0.8rem;
+  display: inline-block;
 }
 
 .mb-one {
   margin-bottom: 0.6rem;
+}
+
+.recipe-inset {
+  margin-left: 0.4rem;
+  display: block;
 }
 
 @media screen and (min-width: 900px) {
@@ -50,6 +58,9 @@ li, .social-links__item {
   }
   .mb-one {
     margin-bottom: 1rem;
+  }
+  .recipe-inset {
+    margin-left: 0.8rem;
   }
 }
 
@@ -386,6 +397,166 @@ li, .social-links__item {
   margin-bottom: 0.8rem;
 }
 
+.recipe {
+  width: 97%;
+  margin: 0 auto;
+}
+
+.recipe-time__item {
+  display: block;
+  margin: 0;
+}
+
+.recipe-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recipe-headings {
+  text-align: center;
+}
+
+.recipe-item__ingredient {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.recipe-figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 2rem;
+}
+
+.recipe-figure__image {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.recipe-serves {
+  margin: 1rem 0 2rem;
+}
+
+.recipe-ingredients {
+  margin: 2rem 0 1rem;
+}
+
+.recipe-ingredients__ingredient {
+  display: block;
+}
+
+.recipe-method__list {
+  counter-reset: method-counter;
+}
+
+.recipe-method__list-item {
+  margin: 0.6rem 0 0 3rem;
+  position: relative;
+  display: block;
+}
+
+.recipe-method__list-item::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  counter-increment: method-counter;
+  content: counter(method-counter) ".";
+  width: 1rem;
+  height: auto;
+  position: absolute;
+  left: -2rem;
+}
+
+.to-serve {
+  margin-bottom: 3rem;
+}
+
+.kitchen-nav-list {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.kitchen-nav__list-item {
+  width: 32%;
+  margin: 0;
+  text-align: center;
+}
+
+.kitchen-nav__link {
+  text-decoration: none;
+  width: 100%;
+  font-size: 0.8rem;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.kitchen-nav__text {
+  display: none;
+}
+
+.kitchen-nav__arrow {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 808px) {
+  .recipe {
+    width: 45rem;
+    margin: 0 auto 6rem;
+  }
+  .kitchen-nav__list-item--main {
+    border-left: 0.2rem solid black;
+    border-right: 0.2rem solid black;
+  }
+  .kitchen-nav__text {
+    display: block;
+    width: 60%;
+  }
+  .kitchen-nav__arrow {
+    font-size: inherit;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .recipe-extras__ingredient {
+    margin-left: 1rem;
+  }
+  .recipe-method {
+    margin-bottom: 3rem;
+  }
+  .kitchen-nav-list {
+    width: 70%;
+  }
+}
+
 .contact {
   width: 97%;
   margin: 0 auto 5rem;
@@ -412,10 +583,6 @@ li, .social-links__item {
 
 .contact-intro__text-item {
   display: block;
-  width: 100%;
-}
-
-.contact-form {
   width: 100%;
 }
 
@@ -485,18 +652,8 @@ li, .social-links__item {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .contact-header {
-    font-size: 1.65rem;
-    margin-bottom: 1.8rem;
-  }
-  .contact-text {
-    width: 96%;
-    font-size: 0.9rem;
-    line-height: 1.6rem;
-    margin-bottom: 1.5rem;
-  }
   .contact-intro {
-    width: 40%;
+    width: 65%;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto;
@@ -513,9 +670,6 @@ li, .social-links__item {
   }
   .contact-intro__text-item {
     margin-bottom: 1rem;
-  }
-  .contact-form {
-    width: 60%;
   }
   .form {
     width: 100%;
