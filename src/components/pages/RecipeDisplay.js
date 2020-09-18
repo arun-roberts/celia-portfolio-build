@@ -20,6 +20,8 @@ const Recipe = () => {
         current = blogPosts.findIndex(e => e.id === Number(id)),
         previous = current > 0 ? blogPosts[current - 1] : null,
         next = current < blogPosts.length ? blogPosts[current + 1] : null,
+        prevPath = previous && `${previous.id}/${blogPosts[previous.id].path}`,
+        nextPath = next && `${next.id}/${blogPosts[next.id].path}`,
         { imgDescription, blogText, img: { [imgSize]: { imgUrl, imgWidth, imgHeight } } } = blogPosts[current]
 
     return (
@@ -99,7 +101,7 @@ const Recipe = () => {
                             <li className="kitchen-nav__list-item">
                                 {
                                     previous 
-                                    ? <Link className="kitchen-nav__link" to={"/inthekitchen/" + previous.id}>
+                                    ? <Link className="kitchen-nav__link" to={"/inthekitchen/" + prevPath}>
                                         <p className="kitchen-nav__arrow">{"<"}</p>
                                         <p className="kitchen-nav__text">{previous.imgDescription.toUpperCase()}</p>
                                     </Link> 
@@ -110,7 +112,7 @@ const Recipe = () => {
                             <li className="kitchen-nav__list-item">
                                 {
                                     next 
-                                    ? <Link className="kitchen-nav__link" to={"/inthekitchen/" + next.id}>
+                                    ? <Link className="kitchen-nav__link" to={"/inthekitchen/" + nextPath}>
                                         <p className="kitchen-nav__text">{next.imgDescription.toUpperCase()}</p>
                                         <p className="kitchen-nav__arrow">{">"}</p>
                                     </Link> 

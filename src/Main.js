@@ -13,7 +13,7 @@ const Main = () => {
                     <Route path="/portfolio" children={<Portfolio />} />
                     <Route path="/motion" children={<Motion />} />
                     <Route exact path="/inthekitchen" children={<InTheKitchen />} />
-                    <Route path={"/inthekitchen/:id"} children={<RecipeDisplay />} />
+                    <Route path={"/inthekitchen/:id/:path"} children={<RecipeDisplay />} />
                     <Route path="/about" children={<About />} />
                     <Route path="/contact" children={<Contact />} />
                 </Switch>

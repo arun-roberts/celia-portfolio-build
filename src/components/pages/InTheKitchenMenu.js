@@ -11,7 +11,7 @@ const InTheKitchenMenu = () => {
         <>
             <div className="recipe-container">
                 {blogPosts.map(blogPost => (
-                    <Link key={blogPost.id} className="recipe-item" to={"/inthekitchen/" + blogPost.id}>
+                    <Link key={blogPost.id} className="recipe-item" to={"/inthekitchen/" + blogPost.id + '/' + blogPost.path}>
                         <figure className="recipe-item__figure">
                             <img className="recipe-item__image" src={blogPost.img.small.imgUrl} alt={blogPost.imgDescription} />
                         </figure>
