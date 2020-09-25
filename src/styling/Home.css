@@ -1,7 +1,7 @@
 .home {
     height: 100%;
     width: 100%;
-    background-color: #000;
+    background-color: rgb(255, 255, 255);
 }
 
 .home-container {
@@ -90,13 +90,12 @@
 .slideshow::after {
     content: '';
     position: absolute;
+    display: none;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
-    /* background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); */
-
 }
 
 .slideshow li { 
@@ -156,7 +155,7 @@
     animation-delay: 24s; 
   }
   .slideshow li:nth-child(5) { 
-    background-image: url(https://www.dropbox.com/s/jux6yun0as2vbub/Smoked-Trout-slices-open-sandwich-1%20copy%202.jpg?raw=1);
+    background-image: url(https://www.dropbox.com/s/8xuurxl1s8fgx6p/Straightened.jpg?raw=1);
     animation-delay: 32s; 
   }
 

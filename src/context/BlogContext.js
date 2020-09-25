@@ -4,6 +4,64 @@ export default React.createContext({
     blogPosts: [
         {   img: {
             small: {
+                imgUrl: "https://www.dropbox.com/s/0atg2cnf0mynzdj/RhubarbSlab32S.jpg?raw=1",
+                imgWidth: 400,
+                imgHeight: 267
+            },
+            medium: {
+                imgUrl: "https://www.dropbox.com/s/4pxaa4b2ka61t5w/RhubarbSlab32M.jpg?raw=1",
+                imgWidth: 800,
+                imgHeight: 533
+            },
+            large: {
+                imgUrl: "https://www.dropbox.com/s/cdzsigr40g1g9pp/RhubarbSlab32LGE.jpg?raw=1",
+                imgWidth: 1400,
+                imgHeight: 933
+            }
+            },
+            imgDescription: 'Rhubarb Slab Cake',
+            blogText: {
+                heading: 'Rhubarb Slab Cake',
+                sectionHeadings: [
+                    'Preparation time: 10 minutes',
+                    'Cooking time: 50 mins'
+                ],
+                ingredients: {
+                    main: [
+                        '60g butter, softened', 
+                        '380g light brown sugar',
+                        '2 teaspoons vanilla paste',
+                        '2 eggs',
+                        '300g plain flour',
+                        '1 teaspoon bicarb soda',
+                        '250g sour cream',
+                        'Approximately 400g rhubarb, cut into 7cm lengths',
+                        '1 tablespoon maple syrup',
+                    ]
+                },
+                extras: [
+                    {
+                        items: [
+                            'Whipped cream for serving'
+                        ]
+                    }
+                ],
+                method: [
+                    'Place oven rack in the middle position and preheat conventional oven to 180°C.', 
+                    'Grease a 24cm square cake tin and line the base with baking paper.',
+                    'Beat butter and sugar until combined. Add vanilla and one egg at a time and beat until mixture is light and creamy.',
+                    'On a slow speed beat in half the flour and bicarb followed by half the sour cream and repeat with the rest of the ingredients.',
+                    'Spoon mixture into the prepared tin and smooth over with the back of a spoon. Arrange rhubarb lengths on top in a 3 x 3 alternating grid pattern.',
+                    'Bake cake for approximately 50 minutes or until a skewer comes out clean when tested.',
+                    'Rest the cake for 10 minutes before gently turning out onto a board and then inverting it onto a wire rack to cool.',
+                    'Glaze top of cake with maple syrup.'
+                ]
+            },
+            id: 6,
+            path: 'rhubarb-slab-cake'
+        },
+        {   img: {
+            small: {
                 imgUrl: "https://www.dropbox.com/s/kapve2pw0nl4jpf/APC_0128S.jpg?raw=1",
                 imgWidth: 400,
                 imgHeight: 267

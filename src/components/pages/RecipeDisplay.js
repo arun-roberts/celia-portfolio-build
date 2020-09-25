@@ -59,7 +59,7 @@ const Recipe = () => {
                                 blogText.extras 
                                     ? blogText.extras.map(i => (
                                             <div className="recipe-extras__item mb-one">
-                                                <h4 className="recipe-extras__title mb-one">{i.title}:</h4>
+                                                {i.title && <h4 className="recipe-extras__title mb-one">{i.title}:</h4>}
                                                 <ul>
                                                     {
                                                         i.items.map(e => <li className="recipe-extras__ingredient recipe-inset">{e}</li>)
@@ -89,12 +89,12 @@ const Recipe = () => {
                             </>))
                         }
                     </div>
-                    <div className="to-serve">
+                    {blogText.toServe && <div className="to-serve">
                         <h4 className="to-serve__title mb-one">To serve:</h4>
                         <p className="to-serve__instruction recipe-inset">
                             {blogText.serve}
                         </p>
-                    </div>
+                    </div>}
                 </div>
                 <div className="kitchen-nav">
                         <ul className="kitchen-nav-list">

@@ -10,17 +10,17 @@ const Footer = () => {
             <ul className="social-links">
                 <li className="social-links__item">
                     <a className="social-links__link" href="mailto:celiaulrik@gmail.com" target="_blank" rel="noopener noreferrer">
-                        <Icon className="social-links__icon" icon={envelopeO} size={12} />
+                        <Icon className="social-links__icon email" icon={envelopeO} size={11} />
                     </a>
                 </li>
                 <li className="social-links__item">
                     <a className="social-links__link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                        <Icon className="social-links__icon" icon={linkedin} size={12} />
+                        <Icon className="social-links__icon linked-in" icon={linkedin} size={12} />
                     </a>
                 </li>
                 <li className="social-links__item">
                     <a className="social-links__link" href="https://www.instagram.com/foodonfilm_melbourne/" target="_blank" rel="noopener noreferrer">
-                    <Icon className="social-links__icon" icon={instagram} size={12} />
+                    <Icon className="social-links__icon insta" icon={instagram} size={13} />
                     </a>
                 </li>
             </ul>
