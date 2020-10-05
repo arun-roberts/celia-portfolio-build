@@ -213,7 +213,7 @@ export default React.createContext({
             id: 30
         },
         {
-            url: "https://www.dropbox.com/s/5xbe24aispvuw32/Smoked-Trout-slices-open-sandwich-1%20copy.jpg?raw=1",
+            url: "https://www.dropbox.com/s/q97355nb1hwj5sm/Straightened.jpg?raw=1",
             description: 'Smoked trout',
             width: '500px',
             height: '334px', 
@@ -437,7 +437,7 @@ export default React.createContext({
             id: 63
         },
         {
-            url: "https://www.dropbox.com/s/eo65aymjerxcc5e/PavalovaPassionfriut.jpg?raw=1",
+            url: "https://www.dropbox.com/s/b27lzx4bvet3sv3/PassionfruitPav.jpg?raw=1",
             description: 'Passionfruit pavlova',
             width: '500px',
             height: '476px', 

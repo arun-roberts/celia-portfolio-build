@@ -240,8 +240,7 @@ export default React.createContext({
                         ]
                     }
                     
-                ],
-                serve: 'Spread hummus into a shallow bowl, drizzle with olive oil and top with garnishes and serve with pitta chips or warm bread.'
+                ]
             },
             id: 3,
             path: 'lemon-yoghurt-cake'
@@ -317,7 +316,7 @@ export default React.createContext({
                 sectionHeadings: [
                     'Preparation time: 15 minutes',
                     'Cooking time: 15 minutes',
-                    'serves: 4',
+                    'Serves: 4',
                 ],
                 ingredients: {
                     main: ['2 cups frozen baby peas', '2 small zucchinis, grated', '1/2 cup roughly chopped mint', '80g parmesan, grated', '1 red chilli, finely chopped (optional)', '1/2 cup self raising flour', '2 large eggs, lightly beaten', 'Salt & pepper to taste', 'Olive oil for frying'],
