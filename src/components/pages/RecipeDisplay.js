@@ -92,7 +92,7 @@ const Recipe = () => {
                     {blogText.toServe && <div className="to-serve">
                         <h4 className="to-serve__title mb-one">To serve:</h4>
                         <p className="to-serve__instruction recipe-inset">
-                            {blogText.serve}
+                            {blogText.toServe}
                         </p>
                     </div>}
                 </div>

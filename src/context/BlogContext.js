@@ -4,6 +4,50 @@ export default React.createContext({
     blogPosts: [
         {   img: {
             small: {
+                imgUrl: "https://www.dropbox.com/s/04u2kzwub6a2smy/ScandiOnions32S.jpg?raw=1",
+                imgWidth: 400,
+                imgHeight: 267
+            },
+            medium: {
+                imgUrl: "https://www.dropbox.com/s/7d0y8e1zq64kjcj/ScandiOnions32M.jpg?raw=1",
+                imgWidth: 800,
+                imgHeight: 533
+            },
+            large: {
+                imgUrl: "https://www.dropbox.com/s/8xri6kq9v05ua1s/ScandiOnions32LGE.jpg?raw=1",
+                imgWidth: 1400,
+                imgHeight: 933
+            }
+            },
+            imgDescription: 'Scandinavian Onion Rings',
+            blogText: {
+                heading: 'Scandinavian Onion Rings',
+                sectionHeadings: [
+                    'Preparation time: 15 minutes'
+                ],
+                ingredients: {
+                    main: [
+                        '4 red onions', 
+                        '3/4 cup sugar',
+                        '3 teaspoons salt',
+                        '2 teaspoons dill seeds',
+                        '1 cup apple cider vinegar',
+                        '1/2 cup water',
+                    ]
+                },
+                method: [
+                    'Thinly slice the onions and pack tightly into sterile jars.', 
+                    'Put the rest of the ingredients into a small saucepan and stir to dissolve sugar and salt over a medium heat. Bring to the boil and remove from heat.',
+                    'Pour the liquid into jars while hot and seal jars.',
+                    'Allow to cool completely and store in the fridge for at least 4 days before using.'
+                ],
+                toServe: 'Serve alongside cheese, cured fish or meats, a bbq or as part of a salad.'
+            },
+            id: 7,
+            path: 'scandinavian-onion-rings'
+        },
+        {   img: {
+            small: {
                 imgUrl: "https://www.dropbox.com/s/0atg2cnf0mynzdj/RhubarbSlab32S.jpg?raw=1",
                 imgWidth: 400,
                 imgHeight: 267
@@ -98,7 +142,7 @@ export default React.createContext({
                     'Add enough cold water to achieve desired consistency and whisk until creamy.',
                     'Season to taste with salt & pepper.'
                 ],
-                serve: 'Use a thicker consistency dressing for dolloping on roast vegies, lamb, falafels or in wraps. If dressing a salad containing bitter leaves, add a teaspoon of honey to the mix.'
+                toServe: 'Use a thicker consistency dressing for dolloping on roast vegies, lamb, falafels or in wraps. If dressing a salad containing bitter leaves, add a teaspoon of honey to the mix.'
             },
             id: 5,
             path: 'mustard-tahini-dressing'
@@ -175,7 +219,7 @@ export default React.createContext({
                     }
                     
                 ],
-                serve: 'Serve with a puddle of syrup and slices of fresh blood orange.'
+                toServe: 'Serve with a puddle of syrup and slices of fresh blood orange.'
             },
             id: 4,
             path: 'double-chocolate-panna-cotta'
@@ -286,7 +330,7 @@ export default React.createContext({
                     'Place beetroot, beans, garlic, tahini and 2 tablespoons of lemon juice in a food processor and blend until smooth - add more lemon juice or water to achieve a smooth paste consistency.', 
                     'Season with salt and pepper.'
                 ],
-                serve: 'Spread hummus into a shallow bowl, drizzle with olive oil and top with garnishes and serve with pitta chips or warm bread.'
+                toServe: 'Spread hummus into a shallow bowl, drizzle with olive oil and top with garnishes and serve with pitta chips or warm bread.'
             },
             id: 2,
             path: 'beetroot-white-bean-hummus'
@@ -331,7 +375,7 @@ export default React.createContext({
                     'Heat a light drizzle of olive oil in a non-stick pan on medium-high heat and place 1/4 cupfuls of the fritter mixture into the hot pan. Gently flatten and round each mound of mixture. Cook for 1-2 minutes on each side or until just golden. Repeat with any remaining mixture.', 
                     'For the whip - add the avocado flesh and crumbled feta to a small food processing bowl and blitz until smooth (add a little lemon juice if needed)'
                 ],
-                serve: 'Serve the fritters warm with a dollop of whip and extra sprigs of mint.'
+                toServe: 'Serve the fritters warm with a dollop of whip and extra sprigs of mint.'
             },
             id: 1,
             path: 'zucchini-fritters'
@@ -377,7 +421,7 @@ export default React.createContext({
                     'Season to taste.',
                     'For the parsnip chips, heat oil in saucepan to 160oC. Add parsnip chips in small batches and fry until golden. Drain on absorbent paper and sprinkle with salt flakes.'
                 ],
-                serve: 'Serve warmed soup topped with parsnip chips'
+                toServe: 'Serve warmed soup topped with parsnip chips'
             },
             id: 0,
             path: 'parsnip-soup'
