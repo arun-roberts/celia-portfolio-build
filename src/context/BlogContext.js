@@ -4,6 +4,56 @@ export default React.createContext({
     blogPosts: [
         {   img: {
             small: {
+                imgUrl: "https://www.dropbox.com/s/v30xkaau16hef44/Peanutbiscuits23S.jpeg?raw=1",
+                imgWidth: 400,
+                imgHeight: 267
+            },
+            medium: {
+                imgUrl: "https://www.dropbox.com/s/lm12z5kxxaoh88y/Peanutbiscuits23M.jpeg?raw=1",
+                imgWidth: 800,
+                imgHeight: 533
+            },
+            large: {
+                imgUrl: "https://www.dropbox.com/s/f5q14tntb0oo6sh/Peanutbiscuits23LGE.jpeg?raw=1",
+                imgWidth: 1400,
+                imgHeight: 933
+            }
+            },
+            imgDescription: 'Peanut Biscuits',
+            blogText: {
+                heading: 'Peanut Biscuits',
+                sectionHeadings: [
+                    'Preparation Time: 10 minutes',
+                    'Cooking Time: 15 mins',
+                    'Makes approximately 30 biscuits'
+                ],
+                ingredients: {
+                    main: [
+                        '1 egg', 
+                        '1 cup sugar',
+                        '85g butter, melted and cooled',
+                        '1 cup self raising flour',
+                        '1 tablespoon cocoa powder',
+                        '1/2 teaspoon salt',
+                        '250g raw peanuts, skins on',
+                    ]
+                },
+                method: [
+                    'Preheat conventional oven to 150°C.', 
+                    'Line baking trays with baking paper',
+                    'Beat egg and sugar in a medium sized bowl until combined. Stir in melted butter.',
+                    'Add flour, cocoa powder and salt and mix to combine.',
+                    'Stir the peanuts through the mixture.',
+                    'Place tablespoon amounts onto baking trays and slightly press down the rough mounds with the back of a fork.',
+                    'Bake in oven 15 minutes (chewy) - 20 minutes (crispy).',
+                    'Leave biscuits on the trays to set and cool slightly before transferring to a wire rack to cool completely.',
+                ]
+            },
+            id: 8,
+            path: 'peanut-biscuits'
+        },
+        {   img: {
+            small: {
                 imgUrl: "https://www.dropbox.com/s/04u2kzwub6a2smy/ScandiOnions32S.jpg?raw=1",
                 imgWidth: 400,
                 imgHeight: 267
