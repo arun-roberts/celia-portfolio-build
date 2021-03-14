@@ -15,7 +15,7 @@ const About = () => {
             </div>
             <div className="about__content">
                 <p className="about__text">
-                    <span className="about__text--black">FOOD ON FILM</span> can bring together other freelance creatives as required - art directors, producers, photographers, videographers, stylists and assistants to offer teams for food styling services to clients requiring food imagery for stills and video. We have access to a props pantry or can source props and provide recipe development and testing to make brands shine.
+                    <span className="about__text--black">FOOD ON FILM</span> can bring together other freelance creatives as required - art directors, producers, photographers, videographers and stylists to offer teams for food styling services to clients requiring food imagery for stills and video. We have access to a props pantry and provide recipe development and testing to make brands shine.
                     <br/>
                     <br/>
                     <span className="about__text--black">FOOD ON FILM</span> are passionate about working as sustainably as possible. We recycle, use worm farms, compost, donate to food banks and use local produce where possible to minimise our footprint. 
