@@ -4,6 +4,57 @@ export default React.createContext({
     blogPosts: [
         {   img: {
             small: {
+                imgUrl: "https://www.dropbox.com/s/zwna4bb9yu3aiz3/Vego%20carbonara%20S.jpeg?raw=1",
+                imgWidth: 400,
+                imgHeight: 267
+            },
+            medium: {
+                imgUrl: "https://www.dropbox.com/s/inard5sdo7cg5wg/Vego%20carbonara%20M.jpeg?raw=1",
+                imgWidth: 800,
+                imgHeight: 533
+            },
+            large: {
+                imgUrl: "https://www.dropbox.com/s/zau68p6nkk83i7p/Vego%20carbonara%20LGE.jpeg?raw=1",
+                imgWidth: 1400,
+                imgHeight: 933
+            }
+            },
+            imgDescription: 'Pasta Alla Carbonara Vegetariana',
+            blogText: {
+                heading: 'Pasta Alla Carbonara Vegetariana',
+                sectionHeadings: [
+                    'Preparation Time: 10 minutes',
+                    'Cooking Time: 15 mins',
+                    'Serves 4'
+                ],
+                ingredients: {
+                    main: [
+                        '2 tbs olive oil', 
+                        '3 cloves garlic, bruised',
+                        '200g (approx so just go with pack size) halloumi cut into 2mm batons',
+                        '1 teaspoon smoked paprika',
+                        '25g butter',
+                        '350g spaghetti or other pasta (photo is fettuccine)',
+                        '3 egg yolks',
+                        '75g parmesan, finely grated',
+                        '150ml cream',
+                        'Salt & pepper'
+                    ]
+                },
+                method: [
+                    'Heat oil in a frying pan and sauté the garlic until it’s a deep golden colour. Remove garlic and discard.', 
+                    'Add halloumi in small batches and cook until halloumi is golden & crispy. Return all halloumi to the pan and sprinkle with smoked paprika and toss. Remove pan from the heat and add butter.',
+                    'Cook pasta.',
+                    'While pasta is cooking, combine the egg yolks, cheese and cream in a bowl and season with salt & pepper.',
+                    'Drain pasta and toss well with the egg mixture in the hot pasta saucepan. Add the halloumi and butter mix to the pasta and toss all together.',
+                ],
+                toServe: 'Serve immediately with a sprinkle of parsley and extra parmesan on the side.'
+            },
+            id: 9,
+            path: 'carbonara-vegetariana'
+        },
+        {   img: {
+            small: {
                 imgUrl: "https://www.dropbox.com/s/v30xkaau16hef44/Peanutbiscuits23S.jpeg?raw=1",
                 imgWidth: 400,
                 imgHeight: 267
