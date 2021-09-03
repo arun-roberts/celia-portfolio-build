@@ -4,17 +4,17 @@ export default React.createContext({
     blogPosts: [
         {   img: {
             small: {
-                imgUrl: "https://www.dropbox.com/s/s8e2vgp1o13cj2b/Porridge%20Bars%20S.heic?raw=1",
+                imgUrl: "https://www.dropbox.com/s/m9drcr65dxmto0f/Porridge%20Bars%20S.jpg?raw=1",
                 imgWidth: 400,
                 imgHeight: 267
             },
             medium: {
-                imgUrl: "https://www.dropbox.com/s/tc5ga8zza1nrrew/Porridge%20Bars%20M.heic?raw=1",
+                imgUrl: "https://www.dropbox.com/s/gim1nz95ik5ws6l/Porridge%20Bars%20M.jpg?raw=1",
                 imgWidth: 800,
                 imgHeight: 533
             },
             large: {
-                imgUrl: "https://www.dropbox.com/s/x21tptfuf0ch64x/Porridge%20Bars%20LGE.heic?raw=1",
+                imgUrl: "https://www.dropbox.com/s/rlq3i6gils0ppy2/Porridge%20Bars%20LGE.jpg?raw=1",
                 imgWidth: 1400,
                 imgHeight: 933
             }
