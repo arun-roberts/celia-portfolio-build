@@ -4,6 +4,62 @@ export default React.createContext({
     blogPosts: [
         {   img: {
             small: {
+                imgUrl: "https://www.dropbox.com/s/s8e2vgp1o13cj2b/Porridge%20Bars%20S.heic?raw=1",
+                imgWidth: 400,
+                imgHeight: 267
+            },
+            medium: {
+                imgUrl: "https://www.dropbox.com/s/tc5ga8zza1nrrew/Porridge%20Bars%20M.heic?raw=1",
+                imgWidth: 800,
+                imgHeight: 533
+            },
+            large: {
+                imgUrl: "https://www.dropbox.com/s/x21tptfuf0ch64x/Porridge%20Bars%20LGE.heic?raw=1",
+                imgWidth: 1400,
+                imgHeight: 933
+            }
+            },
+            imgDescription: 'Porridge Bars',
+            blogText: {
+                heading: 'Porridge Bars',
+                sectionHeadings: [
+                    'Preparation Time: 15 minutes',
+                    'Cooking Time: 40 minutes',
+                    'Makes approximately 12 bars'
+                ],
+                ingredients: {
+                    main: [
+                        '250g pitted medjool dates, roughly chopped', 
+                        '200ml water',
+                        '1 teaspoon vanilla paste',
+                        '2 cups rolled oats',
+                        '1 cup self raising flour',
+                        '1/2 cup sugar',
+                        '150g butter, cut into cubes'
+                    ]
+                },
+                extras: [
+                    {
+                        items: [
+                            '(Substitute Nutalex for butter for a vegan option. Replace dates with other dried fruit such as apricots or sultanas.)'
+                        ]
+                    }
+                ],
+                method: [
+                    'Pre-heat oven to 180°C.', 
+                    'Grease a 23cm square baking tin with a small amount of butter and line the base and overhang two sides by 3cm with baking paper.',
+                    'Place the dates and water into a small saucepan and cook down until the dates are a moist thick paste. Stir in vanilla and set aside.',
+                    'Mix the dry ingredients together and rub in the butter.',
+                    'Spread 2/3 of the mixture into the prepared tin pressing down lightly. Top with the date mixture followed by the remaining dry mixture.',
+                    'Bake in oven for 40 minutes or until golden brown.',
+                    'Leave in tin to cool for 15 minutes before lifting out and cutting into bars.'
+                ]
+            },
+            id: 10,
+            path: 'porridge-bars'
+        },
+        {   img: {
+            small: {
                 imgUrl: "https://www.dropbox.com/s/zwna4bb9yu3aiz3/Vego%20carbonara%20S.jpeg?raw=1",
                 imgWidth: 400,
                 imgHeight: 267
